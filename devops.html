@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Your Name</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="biomedtech.html">BioMedTech</a>
+      <a href="fintech.html">FinTech</a>
+      <a href="data-analytics.html">Data Analytics</a>
+      <a href="data-engineering.html">Data Engineering</a>
+      <a href="observability.html">Observability & SIEM</a>
+      <a href="devops.html" class="active">DevOps</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Technical · Platform</p>
+    <h1 class="domain-title">DevOps</h1>
+    <p class="domain-desc">Infrastructure as code, container orchestration, and CI/CD pipelines — building reliable, automated, and scalable deployment platforms on AWS and Kubernetes.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ARCHITECTURE & WRITEUPS -->
+  <p class="section-label">Architecture &amp; writeups</p>
+  <div class="arch-list">
+
+    <div class="arch-card">
+      <div class="arch-icon">🚀</div>
+      <div class="arch-body">
+        <p class="arch-title">GitOps with ArgoCD on EKS</p>
+        <p class="arch-sub">Fully declarative GitOps deployment pipeline. App manifests in Git, ArgoCD syncs to EKS clusters across dev/staging/prod with automated rollbacks.</p>
+      </div>
+      <a href="https://github.com/yourusername/gitops-argocd" target="_blank" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">🏗️</div>
+      <div class="arch-body">
+        <p class="arch-title">Terraform Modules — AWS Landing Zone</p>
+        <p class="arch-sub">Reusable Terraform modules for VPC, EKS, RDS, and IAM patterns implementing AWS Well-Architected Framework across multi-account org.</p>
+      </div>
+      <a href="https://github.com/yourusername/terraform-aws-landing-zone" target="_blank" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">Zero-Downtime Deployment Strategy</p>
+        <p class="arch-sub">Blue/green and canary deployment patterns implemented with ALB weighted routing, feature flags, and automated smoke tests.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- INFRASTRUCTURE DIAGRAMS -->
+  <p class="section-label">Infrastructure diagrams</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon coral">⚙️</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">EKS Multi-tenant Cluster</p>
+      <p class="card-desc">Production Kubernetes cluster with namespace isolation, RBAC, NetworkPolicy, resource quotas, and Cluster Autoscaler.</p>
+      <div class="tag-row">
+        <span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">RBAC</span><span class="tag">Karpenter</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon coral">🔄</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">GitHub Actions CI/CD Pipeline</p>
+      <p class="card-desc">Multi-stage pipeline: lint → test → build → push to ECR → deploy to EKS with environment promotion gates.</p>
+      <div class="tag-row">
+        <span class="tag">GitHub Actions</span><span class="tag">ECR</span><span class="tag">EKS</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon blue">🌐</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Service Mesh with Istio</p>
+      <p class="card-desc">Istio service mesh for mTLS between services, traffic management, and Kiali topology visualization across 40+ microservices.</p>
+      <div class="tag-row">
+        <span class="tag">Istio</span><span class="tag">Kiali</span><span class="tag">Envoy</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon amber">🔐</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Secrets Management with Vault</p>
+      <p class="card-desc">HashiCorp Vault deployed on Kubernetes with dynamic secrets, AWS auth backend, and Vault Agent sidecar injection.</p>
+      <div class="tag-row">
+        <span class="tag">Vault</span><span class="tag">Kubernetes</span><span class="tag">AWS Auth</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon coral">📦</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Docker Compose → Kubernetes Migration</p>
+      <p class="card-desc">Lift-and-shift playbook for migrating a 12-service Docker Compose app to Kubernetes with Kompose and Helm charts.</p>
+      <div class="tag-row">
+        <span class="tag">Docker</span><span class="tag">Kompose</span><span class="tag">Helm</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-row">
+    <span class="contact-label">Get in touch</span>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
+    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
+    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
+  </div>
+
+</div>
+</main>
+
+</body>
+</html>

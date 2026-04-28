@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Engineering — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Your Name</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="biomedtech.html">BioMedTech</a>
+      <a href="fintech.html">FinTech</a>
+      <a href="data-analytics.html">Data Analytics</a>
+      <a href="data-engineering.html" class="active">Data Engineering</a>
+      <a href="observability.html">Observability & SIEM</a>
+      <a href="devops.html">DevOps</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Technical · Platform</p>
+    <h1 class="domain-title">Data Engineering</h1>
+    <p class="domain-desc">Pipelines, integrations, and data platforms — batch and streaming ETL/ELT workflows built for reliability, scalability, and observability across cloud-native environments.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- LIVE DEMOS -->
+  <p class="section-label">Live demos — Streamlit</p>
+  <div class="projects-grid">
+
+    <a href="https://your-streamlit-link.streamlit.app" target="_blank" class="project-card linked">
+      <div class="card-top">
+        <div class="card-icon blue">🔁</div>
+        <span class="link-badge">Streamlit ↗</span>
+      </div>
+      <p class="card-name">Pipeline Lineage Visualizer</p>
+      <p class="card-desc">Interactive DAG explorer showing data lineage across Airflow pipelines with run history and SLA tracking.</p>
+      <div class="tag-row">
+        <span class="tag">Airflow</span><span class="tag">NetworkX</span><span class="tag">Plotly</span>
+      </div>
+    </a>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ARCHITECTURE & WRITEUPS -->
+  <p class="section-label">Architecture &amp; writeups</p>
+  <div class="arch-list">
+
+    <div class="arch-card">
+      <div class="arch-icon">⚡</div>
+      <div class="arch-body">
+        <p class="arch-title">Streaming ETL with Kafka + Spark Structured Streaming</p>
+        <p class="arch-sub">Near real-time ingestion pipeline processing 500K events/min from IoT sensors into a Delta Lake on S3.</p>
+      </div>
+      <a href="https://github.com/yourusername/streaming-etl" target="_blank" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">🗂️</div>
+      <div class="arch-body">
+        <p class="arch-title">Medallion Architecture on Databricks</p>
+        <p class="arch-sub">Bronze / Silver / Gold lakehouse pattern with Delta Live Tables, Unity Catalog governance, and dbt transformations.</p>
+      </div>
+      <a href="https://github.com/yourusername/medallion-arch" target="_blank" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">CDC Pipeline with Debezium + Kafka</p>
+        <p class="arch-sub">Change data capture from PostgreSQL into a Kafka topic with schema registry, consumed by a downstream Redshift warehouse.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- INFRASTRUCTURE -->
+  <p class="section-label">Cloud &amp; infrastructure</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon amber">☁️</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">AWS Glue + Redshift ELT</p>
+      <p class="card-desc">Serverless ELT workflow using Glue crawlers, Glue Studio jobs, and Redshift Spectrum for petabyte-scale queries.</p>
+      <div class="tag-row">
+        <span class="tag">Glue</span><span class="tag">Redshift</span><span class="tag">S3</span><span class="tag">Athena</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon blue">🔗</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">API Integration Hub</p>
+      <p class="card-desc">Event-driven integration layer using API Gateway, Lambda, and SQS to normalize data from 12 third-party SaaS APIs.</p>
+      <div class="tag-row">
+        <span class="tag">API Gateway</span><span class="tag">Lambda</span><span class="tag">SQS</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon coral">🕐</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Airflow on EKS</p>
+      <p class="card-desc">Production Airflow deployment on Kubernetes with KubernetesExecutor, GitSync DAG loading, and Prometheus metrics.</p>
+      <div class="tag-row">
+        <span class="tag">Airflow</span><span class="tag">EKS</span><span class="tag">Helm</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-row">
+    <span class="contact-label">Get in touch</span>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
+    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
+    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
+  </div>
+
+</div>
+</main>
+
+</body>
+</html>

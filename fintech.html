@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinTech — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Your Name</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="biomedtech.html">BioMedTech</a>
+      <a href="fintech.html" class="active">FinTech</a>
+      <a href="data-analytics.html">Data Analytics</a>
+      <a href="data-engineering.html">Data Engineering</a>
+      <a href="observability.html">Observability & SIEM</a>
+      <a href="devops.html">DevOps</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Industry · Domain</p>
+    <h1 class="domain-title">FinTech</h1>
+    <p class="domain-desc">Data engineering and machine learning applied to financial services — fraud detection, risk modeling, real-time streaming pipelines, and regulatory reporting.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- LIVE DEMOS -->
+  <p class="section-label">Live demos — Streamlit</p>
+  <div class="projects-grid">
+
+    <a href="https://your-streamlit-link.streamlit.app" target="_blank" class="project-card linked">
+      <div class="card-top">
+        <div class="card-icon green">💳</div>
+        <span class="link-badge">Streamlit ↗</span>
+      </div>
+      <p class="card-name">Credit Risk Scorecard</p>
+      <p class="card-desc">Logistic regression scorecard with WoE binning and IV feature selection for loan default prediction.</p>
+      <div class="tag-row">
+        <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
+      </div>
+    </a>
+
+    <a href="https://your-streamlit-link-2.streamlit.app" target="_blank" class="project-card linked">
+      <div class="card-top">
+        <div class="card-icon green">📈</div>
+        <span class="link-badge">Streamlit ↗</span>
+      </div>
+      <p class="card-name">Portfolio Risk Analyzer</p>
+      <p class="card-desc">Monte Carlo VaR simulation and Sharpe ratio analysis across user-defined equity portfolios.</p>
+      <div class="tag-row">
+        <span class="tag">NumPy</span><span class="tag">Plotly</span><span class="tag">yFinance</span>
+      </div>
+    </a>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ARCHITECTURE & WRITEUPS -->
+  <p class="section-label">Architecture &amp; writeups</p>
+  <div class="arch-list">
+
+    <div class="arch-card">
+      <div class="arch-icon">⚡</div>
+      <div class="arch-body">
+        <p class="arch-title">Real-time Fraud Detection Pipeline</p>
+        <p class="arch-sub">Kafka + Flink streaming pipeline with sub-100ms latency scoring. Feature store backed by Redis, model served via SageMaker endpoint.</p>
+      </div>
+      <a href="https://github.com/yourusername/fraud-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">Regulatory Reporting Automation (Basel III)</p>
+        <p class="arch-sub">dbt models transforming raw transaction data into Basel III capital adequacy reports with automated reconciliation checks.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- INFRASTRUCTURE -->
+  <p class="section-label">Cloud &amp; infrastructure</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon amber">☁️</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Data Lakehouse on AWS</p>
+      <p class="card-desc">S3 + Glue + Redshift Spectrum lakehouse for financial transaction history with partitioned Parquet storage.</p>
+      <div class="tag-row">
+        <span class="tag">S3</span><span class="tag">Glue</span><span class="tag">Redshift</span><span class="tag">Parquet</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon coral">🔒</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">PCI-DSS Compliant Data Vault</p>
+      <p class="card-desc">Tokenization and encryption architecture for cardholder data with audit logging and access controls.</p>
+      <div class="tag-row">
+        <span class="tag">KMS</span><span class="tag">Secrets Manager</span><span class="tag">IAM</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-row">
+    <span class="contact-label">Get in touch</span>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
+    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
+    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
+  </div>
+
+</div>
+</main>
+
+</body>
+</html>

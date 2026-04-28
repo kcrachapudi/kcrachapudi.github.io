@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioMedTech — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Your Name</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="biomedtech.html" class="active">BioMedTech</a>
+      <a href="fintech.html">FinTech</a>
+      <a href="data-analytics.html">Data Analytics</a>
+      <a href="data-engineering.html">Data Engineering</a>
+      <a href="observability.html">Observability & SIEM</a>
+      <a href="devops.html">DevOps</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Industry · Domain</p>
+    <h1 class="domain-title">BioMedTech</h1>
+    <p class="domain-desc">Machine learning and data applications in biomedical and clinical contexts — from predictive diagnostics to genomics pipelines and FHIR-compliant data infrastructure.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- LIVE DEMOS -->
+  <p class="section-label">Live demos — Streamlit</p>
+  <div class="projects-grid">
+
+    <a href="https://your-streamlit-link-1.streamlit.app" target="_blank" class="project-card linked">
+      <div class="card-top">
+        <div class="card-icon teal">⚕️</div>
+        <span class="link-badge">Streamlit ↗</span>
+      </div>
+      <p class="card-name">Cancer Readmission Predictor</p>
+      <p class="card-desc">XGBoost model predicting 30-day hospital readmission risk from EHR features with SHAP explainability.</p>
+      <div class="tag-row">
+        <span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Pandas</span>
+      </div>
+    </a>
+
+    <a href="https://your-streamlit-link-2.streamlit.app" target="_blank" class="project-card linked">
+      <div class="card-top">
+        <div class="card-icon blue">🧬</div>
+        <span class="link-badge">Streamlit ↗</span>
+      </div>
+      <p class="card-name">Genomics Variant Explorer</p>
+      <p class="card-desc">Interactive visualization of SNP variants across cohorts with filtering, annotation, and CSV export.</p>
+      <div class="tag-row">
+        <span class="tag">BioPython</span><span class="tag">Pandas</span><span class="tag">Plotly</span>
+      </div>
+    </a>
+
+    <a href="https://your-streamlit-link-3.streamlit.app" target="_blank" class="project-card linked">
+      <div class="card-top">
+        <div class="card-icon teal">🩺</div>
+        <span class="link-badge">Streamlit ↗</span>
+      </div>
+      <p class="card-name">Clinical Trial Dashboard</p>
+      <p class="card-desc">Real-time enrollment tracking and adverse event monitoring dashboard for Phase II trial data.</p>
+      <div class="tag-row">
+        <span class="tag">Streamlit</span><span class="tag">Altair</span><span class="tag">Pandas</span>
+      </div>
+    </a>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ARCHITECTURE & WRITEUPS -->
+  <p class="section-label">Architecture &amp; writeups</p>
+  <div class="arch-list">
+
+    <div class="arch-card">
+      <div class="arch-icon">🗂️</div>
+      <div class="arch-body">
+        <p class="arch-title">FHIR Data Pipeline on AWS</p>
+        <p class="arch-sub">End-to-end HL7 FHIR ingestion pipeline using Glue, S3, and Athena for queryable clinical datasets.</p>
+      </div>
+      <a href="https://github.com/yourusername/fhir-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">Clinical NLP Entity Extraction</p>
+        <p class="arch-sub">SpaCy + custom rules to extract diagnoses, medications, and dosages from unstructured clinical notes.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- INFRASTRUCTURE -->
+  <p class="section-label">Cloud &amp; infrastructure</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon amber">☁️</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">EKS Cluster — Clinical Workloads</p>
+      <p class="card-desc">Multi-tenant Kubernetes cluster with RBAC, namespacing, and autoscaling for ML inference workloads.</p>
+      <div class="tag-row">
+        <span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">Terraform</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon coral">⚙️</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Lambda + Step Functions Pipeline</p>
+      <p class="card-desc">Serverless orchestration for async lab result processing and downstream notification dispatch.</p>
+      <div class="tag-row">
+        <span class="tag">Lambda</span><span class="tag">SQS</span><span class="tag">CDK</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-row">
+    <span class="contact-label">Get in touch</span>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
+    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
+    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
+  </div>
+
+</div>
+</main>
+
+</body>
+</html>

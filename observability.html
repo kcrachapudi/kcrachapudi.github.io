@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Observability & SIEM — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Your Name</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="biomedtech.html">BioMedTech</a>
+      <a href="fintech.html">FinTech</a>
+      <a href="data-analytics.html">Data Analytics</a>
+      <a href="data-engineering.html">Data Engineering</a>
+      <a href="observability.html" class="active">Observability & SIEM</a>
+      <a href="devops.html">DevOps</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Technical · Platform</p>
+    <h1 class="domain-title">Observability &amp; SIEM</h1>
+    <p class="domain-desc">Monitoring, logging, tracing, and security event management — building full-stack observability across distributed systems using Splunk, Datadog, ELK, and Grafana.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ARCHITECTURE & WRITEUPS -->
+  <p class="section-label">Architecture &amp; writeups</p>
+  <div class="arch-list">
+
+    <div class="arch-card">
+      <div class="arch-icon">🔍</div>
+      <div class="arch-body">
+        <p class="arch-title">Splunk SIEM — Threat Detection Rules</p>
+        <p class="arch-sub">Custom SPL correlation searches and alert rules for detecting lateral movement, privilege escalation, and data exfiltration patterns.</p>
+      </div>
+      <a href="https://github.com/yourusername/splunk-detections" target="_blank" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">ELK Stack — Centralized Log Management</p>
+        <p class="arch-sub">Logstash ingestion pipelines, Elasticsearch index lifecycle management, and Kibana dashboards for a 200-node microservices platform.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">Datadog APM + Distributed Tracing</p>
+        <p class="arch-sub">Full APM instrumentation across a Python/Node microservices mesh with custom span tagging, SLO tracking, and PagerDuty escalation.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- INFRASTRUCTURE DIAGRAMS -->
+  <p class="section-label">Dashboards &amp; infrastructure diagrams</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon amber">📉</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Grafana Observability Stack</p>
+      <p class="card-desc">Prometheus + Grafana stack with custom dashboards for infrastructure metrics, SLI/SLO tracking, and error budget burn rates.</p>
+      <div class="tag-row">
+        <span class="tag">Grafana</span><span class="tag">Prometheus</span><span class="tag">Loki</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon amber">🛡️</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">AWS Security Lake + Splunk Integration</p>
+      <p class="card-desc">OCSF-normalized security log aggregation from AWS services into Splunk via Kinesis Firehose and S3.</p>
+      <div class="tag-row">
+        <span class="tag">Security Lake</span><span class="tag">Kinesis</span><span class="tag">Splunk</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon blue">🔔</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">Incident Response Runbook Automation</p>
+      <p class="card-desc">PagerDuty + Rundeck automated runbooks triggered by Datadog alerts, reducing MTTR by 60%.</p>
+      <div class="tag-row">
+        <span class="tag">PagerDuty</span><span class="tag">Datadog</span><span class="tag">Rundeck</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <div class="card-icon coral">📋</div>
+        <span class="diagram-badge">Diagram</span>
+      </div>
+      <p class="card-name">OpenTelemetry Collector Pipeline</p>
+      <p class="card-desc">Vendor-agnostic telemetry pipeline collecting traces, metrics, and logs and routing to Datadog + Jaeger backends.</p>
+      <div class="tag-row">
+        <span class="tag">OpenTelemetry</span><span class="tag">Jaeger</span><span class="tag">Datadog</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-row">
+    <span class="contact-label">Get in touch</span>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
+    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
+    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
+  </div>
+
+</div>
+</main>
+
+</body>
+</html>

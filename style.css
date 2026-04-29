@@ -481,3 +481,12 @@ footer .contact-link {
 }
 footer .contact-link:hover { background: rgba(10,200,200,0.25); color: #c8f5f5; }
 footer .footer-copy { font-size: 11px; color: rgba(160,220,220,0.5); margin-top: 0.25rem; }
+
+/* ── Hero subtitle line ── */
+.hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--accent);
+  margin-bottom: 14px;
+  letter-spacing: 0.01em;
+}

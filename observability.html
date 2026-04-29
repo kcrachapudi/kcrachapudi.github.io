@@ -8,20 +8,7 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Your Name</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="biomedtech.html">BioMedTech</a>
-      <a href="fintech.html">FinTech</a>
-      <a href="data-analytics.html">Data Analytics</a>
-      <a href="data-engineering.html">Data Engineering</a>
-      <a href="observability.html" class="active">Observability & SIEM</a>
-      <a href="devops.html">DevOps</a>
-    </div>
-  </div>
-</nav>
+<script src="nav.js"></script>
 
 <main class="page">
 <div class="container">
@@ -36,7 +23,6 @@
 
   <hr class="divider" />
 
-  <!-- ARCHITECTURE & WRITEUPS -->
   <p class="section-label">Architecture &amp; writeups</p>
   <div class="arch-list">
 
@@ -71,70 +57,42 @@
 
   <hr class="divider" />
 
-  <!-- INFRASTRUCTURE DIAGRAMS -->
   <p class="section-label">Dashboards &amp; infrastructure diagrams</p>
   <div class="projects-grid">
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon amber">📉</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c4">📉</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">Grafana Observability Stack</p>
       <p class="card-desc">Prometheus + Grafana stack with custom dashboards for infrastructure metrics, SLI/SLO tracking, and error budget burn rates.</p>
-      <div class="tag-row">
-        <span class="tag">Grafana</span><span class="tag">Prometheus</span><span class="tag">Loki</span>
-      </div>
+      <div class="tag-row"><span class="tag">Grafana</span><span class="tag">Prometheus</span><span class="tag">Loki</span></div>
     </div>
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon amber">🛡️</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c4">🛡️</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">AWS Security Lake + Splunk Integration</p>
       <p class="card-desc">OCSF-normalized security log aggregation from AWS services into Splunk via Kinesis Firehose and S3.</p>
-      <div class="tag-row">
-        <span class="tag">Security Lake</span><span class="tag">Kinesis</span><span class="tag">Splunk</span>
-      </div>
+      <div class="tag-row"><span class="tag">Security Lake</span><span class="tag">Kinesis</span><span class="tag">Splunk</span></div>
     </div>
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon blue">🔔</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c3">🔔</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">Incident Response Runbook Automation</p>
       <p class="card-desc">PagerDuty + Rundeck automated runbooks triggered by Datadog alerts, reducing MTTR by 60%.</p>
-      <div class="tag-row">
-        <span class="tag">PagerDuty</span><span class="tag">Datadog</span><span class="tag">Rundeck</span>
-      </div>
+      <div class="tag-row"><span class="tag">PagerDuty</span><span class="tag">Datadog</span><span class="tag">Rundeck</span></div>
     </div>
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon coral">📋</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c5">📋</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">OpenTelemetry Collector Pipeline</p>
       <p class="card-desc">Vendor-agnostic telemetry pipeline collecting traces, metrics, and logs and routing to Datadog + Jaeger backends.</p>
-      <div class="tag-row">
-        <span class="tag">OpenTelemetry</span><span class="tag">Jaeger</span><span class="tag">Datadog</span>
-      </div>
+      <div class="tag-row"><span class="tag">OpenTelemetry</span><span class="tag">Jaeger</span><span class="tag">Datadog</span></div>
     </div>
 
-  </div>
-
-  <!-- CONTACT -->
-  <div class="contact-row">
-    <span class="contact-label">Get in touch</span>
-    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
-    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
-    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
   </div>
 
 </div>
 </main>
 
+<script src="footer.js"></script>
 </body>
 </html>

@@ -8,20 +8,7 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Kalyan Rachapudi</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="biomedtech.html">BioMedTech</a>
-      <a href="fintech.html" class="active">FinTech</a>
-      <a href="data-analytics.html">Data Analytics</a>
-      <a href="data-engineering.html">Data Engineering</a>
-      <a href="observability.html">Observability & SIEM</a>
-      <a href="devops.html">DevOps</a>
-    </div>
-  </div>
-</nav>
+<script src="nav.js"></script>
 
 <main class="page">
 <div class="container">
@@ -36,41 +23,31 @@
 
   <hr class="divider" />
 
-  <!-- LIVE DEMOS -->
   <p class="section-label">Live demos — Streamlit</p>
   <div class="projects-grid">
 
     <a href="https://smartcreditriskloaneligibilityengine.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top">
-        <div class="card-icon green">💳</div>
-        <span class="link-badge">Streamlit ↗</span>
-      </div>
-      <p class="card-name">Smart Credit Risk & Loan Eligibility Engine</p>
-      <p class="card-desc">End-to-End FinTech Pipeline: From Raw Banking Data to AI-Driven Decisions.</p>
+      <div class="card-top"><div class="card-icon c2">💳</div><span class="link-badge">Streamlit ↗</span></div>
+      <p class="card-name">Smart Credit Risk &amp; Loan Eligibility Engine</p>
+      <p class="card-desc">End-to-End FinTech pipeline: from raw banking data to AI-driven credit decisions.</p>
       <div class="tag-row">
         <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
       </div>
     </a>
 
     <a href="https://stockmarketperformanceandforecastingengine.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top">
-        <div class="card-icon green">💳</div>
-        <span class="link-badge">Streamlit ↗</span>
-      </div>
-      <p class="card-name">Stock Market Performance & Forecasting Engine</p>
-      <p class="card-desc">An AI-Driven Market Sentinel for Time-Series Analysis & Predictive Modeling.</p>
+      <div class="card-top"><div class="card-icon c2">📈</div><span class="link-badge">Streamlit ↗</span></div>
+      <p class="card-name">Stock Market Performance &amp; Forecasting Engine</p>
+      <p class="card-desc">AI-driven market sentinel for time-series analysis and predictive modeling.</p>
       <div class="tag-row">
         <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
       </div>
     </a>
 
     <a href="https://real-timetransactionfrauddetectionsystem.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top">
-        <div class="card-icon green">📈</div>
-        <span class="link-badge">Streamlit ↗</span>
-      </div>
+      <div class="card-top"><div class="card-icon c2">🔍</div><span class="link-badge">Streamlit ↗</span></div>
       <p class="card-name">Real Time Transaction Fraud Detection System</p>
-      <p class="card-desc">Unsupervised Anomaly Detection for High-Velocity Financial Streams.</p>
+      <p class="card-desc">Unsupervised anomaly detection for high-velocity financial streams.</p>
       <div class="tag-row">
         <span class="tag">NumPy</span><span class="tag">Plotly</span><span class="tag">yFinance</span>
       </div>
@@ -80,7 +57,6 @@
 
   <hr class="divider" />
 
-  <!-- ARCHITECTURE & WRITEUPS -->
   <p class="section-label">Architecture &amp; writeups</p>
   <div class="arch-list">
 
@@ -90,7 +66,7 @@
         <p class="arch-title">Real-time Fraud Detection Pipeline</p>
         <p class="arch-sub">Kafka + Flink streaming pipeline with sub-100ms latency scoring. Feature store backed by Redis, model served via SageMaker endpoint.</p>
       </div>
-      <a href="https://github.com/yourusername/fraud-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
+      <a href="https://github.com/kcrachapudi/fraud-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
     </div>
 
     <div class="arch-card">
@@ -106,46 +82,28 @@
 
   <hr class="divider" />
 
-  <!-- INFRASTRUCTURE -->
   <p class="section-label">Cloud &amp; infrastructure</p>
   <div class="projects-grid">
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon amber">☁️</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c4">☁️</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">Data Lakehouse on AWS</p>
       <p class="card-desc">S3 + Glue + Redshift Spectrum lakehouse for financial transaction history with partitioned Parquet storage.</p>
-      <div class="tag-row">
-        <span class="tag">S3</span><span class="tag">Glue</span><span class="tag">Redshift</span><span class="tag">Parquet</span>
-      </div>
+      <div class="tag-row"><span class="tag">S3</span><span class="tag">Glue</span><span class="tag">Redshift</span><span class="tag">Parquet</span></div>
     </div>
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon coral">🔒</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c5">🔒</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">PCI-DSS Compliant Data Vault</p>
       <p class="card-desc">Tokenization and encryption architecture for cardholder data with audit logging and access controls.</p>
-      <div class="tag-row">
-        <span class="tag">KMS</span><span class="tag">Secrets Manager</span><span class="tag">IAM</span>
-      </div>
+      <div class="tag-row"><span class="tag">KMS</span><span class="tag">Secrets Manager</span><span class="tag">IAM</span></div>
     </div>
 
-  </div>
-
-  <!-- CONTACT -->
-  <div class="contact-row">
-    <span class="contact-label">Get in touch</span>
-    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
-    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
-    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
   </div>
 
 </div>
 </main>
 
+<script src="footer.js"></script>
 </body>
 </html>

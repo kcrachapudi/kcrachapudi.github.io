@@ -8,20 +8,7 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Kalyan Rachapudi</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="biomedtech.html" class="active">BioMedTech</a>
-      <a href="fintech.html">FinTech</a>
-      <a href="data-analytics.html">Data Analytics</a>
-      <a href="data-engineering.html">Data Engineering</a>
-      <a href="observability.html">Observability & SIEM</a>
-      <a href="devops.html">DevOps</a>
-    </div>
-  </div>
-</nav>
+<script src="nav.js"></script>
 
 <main class="page">
 <div class="container">
@@ -36,39 +23,29 @@
 
   <hr class="divider" />
 
-  <!-- LIVE DEMOS -->
   <p class="section-label">Live demos</p>
   <div class="projects-grid">
 
     <a href="https://medistream-ai-ready-medical-imaging-pipeline.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top">
-        <div class="card-icon teal">⚕️</div>
-        <span class="link-badge">Streamlit ↗</span>
-      </div>
+      <div class="card-top"><div class="card-icon c1">⚕️</div><span class="link-badge">Streamlit ↗</span></div>
       <p class="card-name">MediStream AI Ready Medical Imaging Pipeline</p>
-      <p class="card-desc">MediStream AI Ready Medical Imaging Pipeline.</p>
+      <p class="card-desc">End-to-end medical imaging pipeline with DICOM processing and AI-ready data transformation.</p>
       <div class="tag-row">
         <span class="tag">Python</span><span class="tag">PyDicom</span><span class="tag">Plotly</span><span class="tag">Pandas</span>
       </div>
     </a>
 
     <a href="https://bioinform1.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top">
-        <div class="card-icon blue">🧬</div>
-        <span class="link-badge">Streamlit ↗</span>
-      </div>
+      <div class="card-top"><div class="card-icon c3">🧬</div><span class="link-badge">Streamlit ↗</span></div>
       <p class="card-name">Genomics Variant Explorer</p>
-      <p class="card-desc">Interactive visualization of Variants across cohorts with filtering, annotation, and CSV export.</p>
+      <p class="card-desc">Interactive visualization of variants across cohorts with filtering, annotation, and CSV export.</p>
       <div class="tag-row">
         <span class="tag">BioPython</span><span class="tag">Pandas</span><span class="tag">Plotly</span>
       </div>
     </a>
 
     <a href="https://bioinform2.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top">
-        <div class="card-icon teal">🩺</div>
-        <span class="link-badge">Streamlit ↗</span>
-      </div>
+      <div class="card-top"><div class="card-icon c1">🩺</div><span class="link-badge">Streamlit ↗</span></div>
       <p class="card-name">VCF Variant Explorer</p>
       <p class="card-desc">Process VCF files and visualize genetic variants across cohorts with filtering, annotation, and CSV export.</p>
       <div class="tag-row">
@@ -80,7 +57,6 @@
 
   <hr class="divider" />
 
-  <!-- ARCHITECTURE & WRITEUPS -->
   <p class="section-label">Architecture &amp; writeups</p>
   <div class="arch-list">
 
@@ -90,7 +66,7 @@
         <p class="arch-title">FHIR Data Pipeline on AWS</p>
         <p class="arch-sub">End-to-end HL7 FHIR ingestion pipeline using Glue, S3, and Athena for queryable clinical datasets.</p>
       </div>
-      <a href="https://github.com/yourusername/fhir-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
+      <a href="https://github.com/kcrachapudi/fhir-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
     </div>
 
     <div class="arch-card">
@@ -106,46 +82,28 @@
 
   <hr class="divider" />
 
-  <!-- INFRASTRUCTURE -->
   <p class="section-label">Cloud &amp; infrastructure</p>
   <div class="projects-grid">
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon amber">☁️</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c4">☁️</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">EKS Cluster — Clinical Workloads</p>
       <p class="card-desc">Multi-tenant Kubernetes cluster with RBAC, namespacing, and autoscaling for ML inference workloads.</p>
-      <div class="tag-row">
-        <span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">Terraform</span>
-      </div>
+      <div class="tag-row"><span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">Terraform</span></div>
     </div>
 
     <div class="project-card">
-      <div class="card-top">
-        <div class="card-icon coral">⚙️</div>
-        <span class="diagram-badge">Diagram</span>
-      </div>
+      <div class="card-top"><div class="card-icon c5">⚙️</div><span class="diagram-badge">Diagram</span></div>
       <p class="card-name">Lambda + Step Functions Pipeline</p>
       <p class="card-desc">Serverless orchestration for async lab result processing and downstream notification dispatch.</p>
-      <div class="tag-row">
-        <span class="tag">Lambda</span><span class="tag">SQS</span><span class="tag">CDK</span>
-      </div>
+      <div class="tag-row"><span class="tag">Lambda</span><span class="tag">SQS</span><span class="tag">CDK</span></div>
     </div>
 
-  </div>
-
-  <!-- CONTACT -->
-  <div class="contact-row">
-    <span class="contact-label">Get in touch</span>
-    <a href="https://linkedin.com/in/yourhandle" target="_blank" class="contact-link">LinkedIn ↗</a>
-    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub ↗</a>
-    <a href="mailto:you@email.com" class="contact-link">Email ↗</a>
   </div>
 
 </div>
 </main>
 
+<script src="footer.js"></script>
 </body>
 </html>

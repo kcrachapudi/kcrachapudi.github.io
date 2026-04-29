@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -459,3 +459,25 @@ footer {
   font-size: 11px; color: var(--nav-muted);
   margin-top: 0.25rem;
 }
+
+/* ── Footer overrides — proper colors on dark background ── */
+footer {
+  background: #0a2e2e;
+  border-top: 1px solid rgba(10,200,200,0.15);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+footer .contact-row {
+  display: flex; align-items: center; gap: 10px;
+  flex-wrap: wrap; margin-bottom: 0.85rem;
+}
+footer .contact-label { font-size: 12px; color: #5fb8b8; }
+footer .contact-link {
+  font-size: 12px; color: #a0e8e8;
+  padding: 5px 15px; border-radius: 20px;
+  border: 0.5px solid rgba(100,220,220,0.35);
+  background: rgba(10,200,200,0.12);
+  transition: all 0.15s;
+}
+footer .contact-link:hover { background: rgba(10,200,200,0.25); color: #c8f5f5; }
+footer .footer-copy { font-size: 11px; color: rgba(160,220,220,0.5); margin-top: 0.25rem; }

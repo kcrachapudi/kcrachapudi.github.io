@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5QKVQ3EG20');
   </script>
   <meta charset="UTF-8" />
@@ -17,6 +16,87 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Project Detail Cards ── */
+    .proj-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 2rem;
+    }
+
+    .proj-detail-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-top: 2.5px solid var(--ind-border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .proj-detail-card:hover {
+      border-color: var(--border-accent);
+      border-top-color: var(--accent-mid);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .proj-card-header {
+      padding: 1rem 1.15rem 0.75rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .proj-card-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+    .proj-card-summary {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .proj-card-body {
+      padding: 0.75rem 1.15rem;
+      flex: 1;
+    }
+    .proj-card-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .proj-card-body ul li {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      padding-left: 14px;
+      position: relative;
+    }
+    .proj-card-body ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent-mid);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .proj-card-footer {
+      padding: 0.65rem 1.15rem 0.9rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .proj-card-footer .tag-row {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      .proj-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -39,7 +119,7 @@
   <div class="projects-grid">
 
     <a href="https://medistream-ai-ready-medical-imaging-pipeline.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c1">⚕️</div><span class="link-badge">Streamlit ↗</span></div>
+      <div class="card-top"><div class="card-icon c1">⚕️</div><span class="link-badge">Live Demo ↗</span></div>
       <p class="card-name">MediStream AI Ready Medical Imaging Pipeline</p>
       <p class="card-desc">End-to-end medical imaging pipeline with DICOM processing and AI-ready data transformation.</p>
       <div class="tag-row">
@@ -48,7 +128,7 @@
     </a>
 
     <a href="https://bioinform1.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c3">🧬</div><span class="link-badge">Streamlit ↗</span></div>
+      <div class="card-top"><div class="card-icon c3">🧬</div><span class="link-badge">Live Demo ↗</span></div>
       <p class="card-name">Genomics Variant Explorer</p>
       <p class="card-desc">Interactive visualization of variants across cohorts with filtering, annotation, and CSV export.</p>
       <div class="tag-row">
@@ -57,7 +137,7 @@
     </a>
 
     <a href="https://bioinform2.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c1">🩺</div><span class="link-badge">Streamlit ↗</span></div>
+      <div class="card-top"><div class="card-icon c1">🩺</div><span class="link-badge">Live Demo ↗</span></div>
       <p class="card-name">VCF Variant Explorer</p>
       <p class="card-desc">Process VCF files and visualize genetic variants across cohorts with filtering, annotation, and CSV export.</p>
       <div class="tag-row">
@@ -69,25 +149,139 @@
 
   <hr class="divider" />
 
-  <p class="section-label">Architecture &amp; writeups</p>
-  <div class="arch-list">
+  <p class="section-label">Projects</p>
 
-    <div class="arch-card">
-      <div class="arch-icon">🗂️</div>
-      <div class="arch-body">
-        <p class="arch-title">FHIR Data Pipeline on AWS</p>
-        <p class="arch-sub">End-to-end HL7 FHIR ingestion pipeline using Glue, S3, and Athena for queryable clinical datasets.</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Cloud HealthLake HL7 to FHIR Integration Pipeline</p>
+        <p class="proj-card-summary">Cloud-native, event-driven pipeline for processing HL7 healthcare messages, converting them to FHIR bundles, and storing them in AWS HealthLake for analytics and patient insights.</p>
       </div>
-      <a href="https://github.com/kcrachapudi/fhir-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
+      <div class="proj-card-body">
+        <ul>
+          <li>Designed an asynchronous, serverless architecture for HL7 message ingestion using AWS SQS and Lambda.</li>
+          <li>Built a Python Lambda function to parse multiple HL7 message types (ORU, ORM, SIU), convert them to FHIR bundles, and store them in S3 for backup.</li>
+          <li>Integrated AWS HealthLake to persist FHIR bundles and leverage built-in patient analytics, querying, and insights.</li>
+          <li>Implemented CloudWatch monitoring for Lambda execution, message processing, and error tracking.</li>
+          <li>Ensured reliable architecture with retry mechanisms and auditability, allowing replay of messages from S3 in case of ingestion failures.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">AWS IAM</span><span class="tag">AWS KMS</span><span class="tag">Python</span><span class="tag">Lambda</span><span class="tag">SQS</span><span class="tag">S3</span><span class="tag">HealthLake</span><span class="tag">HL7</span><span class="tag">FHIR</span><span class="tag">CloudWatch</span>
+        </div>
+      </div>
     </div>
 
-    <div class="arch-card">
-      <div class="arch-icon">📄</div>
-      <div class="arch-body">
-        <p class="arch-title">Clinical NLP Entity Extraction</p>
-        <p class="arch-sub">SpaCy + custom rules to extract diagnoses, medications, and dosages from unstructured clinical notes.</p>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Distributed Event-Driven Interoperability Healthcare Data Pipeline</p>
+        <p class="proj-card-summary">Resilient, end-to-end clinical data pipeline simulating real-time patient data synchronization between an EHR (Epic-equivalent) and downstream analytics systems.</p>
       </div>
-      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+      <div class="proj-card-body">
+        <ul>
+          <li>Architected a Dual-Zone Gateway using Mirth Connect as a perimeter gateway (DMZ) to ingest, validate, and transform legacy HL7 v2.3.1 messages.</li>
+          <li>Engineered an IRIS Interoperability Production using ObjectScript and BPL framework to manage clinical state machines and ensure data persistence in a multidimensional database.</li>
+          <li>Implemented asynchronous event streaming via Apache Kafka to decouple the clinical core from downstream consumers, ensuring at-least-once delivery to a FastAPI monitoring dashboard.</li>
+          <li>Enforced JWT-based authentication for REST/FHIR endpoints and developed idempotency logic to prevent duplicate HL7 message processing and clinical data corruption.</li>
+          <li>Optimized for containerized deployment with Docker across IRIS and Mirth Connect components.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">REST</span><span class="tag">IRIS</span><span class="tag">Mirth Connect</span><span class="tag">Kafka</span><span class="tag">HL7</span><span class="tag">FHIR</span><span class="tag">Docker</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">IRIS InterSystems CacheDB HealthShare Integration</p>
+        <p class="proj-card-summary">End-to-end healthcare data integration platform simulating real-world workflows of InterSystems HealthShare using InterSystems IRIS.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built ObjectScript-based business logic for patient management and eligibility verification simulating X12 270/271 workflows.</li>
+          <li>Designed a data transformation layer for healthcare message formats including HL7 and X12-style structures.</li>
+          <li>Developed persistent storage using IRIS globals following CacheDB architecture patterns.</li>
+          <li>Created a logging and validation framework for end-to-end transaction tracking and auditability.</li>
+          <li>Exposed healthcare data via FHIR-style REST APIs for downstream consumption.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">InterSystems IRIS</span><span class="tag">ObjectScript</span><span class="tag">HL7</span><span class="tag">X12</span><span class="tag">FHIR</span><span class="tag">CacheDB</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Healthcare Data ELT/ETL Pipeline</p>
+        <p class="proj-card-summary">End-to-end healthcare data pipeline integrating CMS, Medicare/Medicaid, and HIPAA-compliant EDI sources with cloud-scale orchestration and reporting.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a healthcare data pipeline integrating CMS, Medicare/Medicaid, and HIPAA-compliant EDI sources.</li>
+          <li>Developed a FastAPI ingestion engine with plugin-based parsing for ANSI X12 (834/835/837/270/271), HL7 v2, and FHIR R4, secured with HMAC-based APIs.</li>
+          <li>Engineered dbt transformation models standardizing ICD-10/CPT codes, NPI reconciliation, and claims processing (837 vs 835) with HEDIS reporting.</li>
+          <li>Orchestrated batch (837/835) and real-time (270/271) workflows using Apache Airflow, including SFTP dispatch for 835 and 999 transactions.</li>
+          <li>Deployed scalable GCP infrastructure (BigQuery, Cloud Run, Pub/Sub) using Terraform with IAM and Secret Manager for HIPAA-compliant security.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">BigQuery</span><span class="tag">Cloud Run</span><span class="tag">Pub/Sub</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Terraform</span><span class="tag">FHIR</span><span class="tag">HL7</span><span class="tag">X12</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Real-Time Healthcare Data Platform</p>
+        <p class="proj-card-summary">End-to-end real-time healthcare data platform processing X12 claim data via Apache Kafka streaming, medallion architecture on AWS, and NCQA/CMS-compliant metrics generation.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built end-to-end streaming pipeline using Apache Kafka for real-time X12 claims ingestion into AWS S3 and RDS.</li>
+          <li>Implemented modular Python-based consumers with custom X12 parsing logic to transform raw EDI messages.</li>
+          <li>Integrated Amazon RDS (PostgreSQL) in a Bronze/Silver/Gold medallion architecture for scalable data processing and analytics.</li>
+          <li>Developed dynamic SQL-based Gold layer supporting NCQA HEDIS metrics and CMS standards reporting.</li>
+          <li>Processed claims via Spark on Databricks and stored outputs in AWS S3 data lake for downstream consumption.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">Databricks</span><span class="tag">AWS S3</span><span class="tag">AWS RDS</span><span class="tag">AWS EC2</span><span class="tag">AWS IAM</span><span class="tag">Docker</span><span class="tag">X12</span><span class="tag">HEDIS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Healthcare Data Integration Pipeline (HL7 → FHIR)</p>
+        <p class="proj-card-summary">End-to-end pipeline to ingest, parse, validate, and convert real-time HL7 messages into FHIR resources with RESTful APIs and persistent AWS RDS storage.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a custom HL7 parser and validator handling MSH, PID, and PV1 segments with structured error handling and validation pipeline.</li>
+          <li>Converted HL7 messages into FHIR Patient, Encounter, and Bundle resources mimicking real-world hospital integration workflows.</li>
+          <li>Developed FastAPI RESTful APIs with full CRUD operations and advanced filtering endpoints (name, gender, birthDate).</li>
+          <li>Integrated AWS RDS PostgreSQL for persistent storage of patients, visits, and FHIR resources.</li>
+          <li>Built a real-time HL7 message simulator to stream and process continuous data with structured file and console logging.</li>
+          <li>Designed modular architecture separating API, parser, validator, converter, and database layers for maintainability.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">AWS RDS</span><span class="tag">PostgreSQL</span><span class="tag">AWS IAM</span><span class="tag">HL7</span><span class="tag">FHIR</span>
+        </div>
+      </div>
     </div>
 
   </div>

@@ -69,8 +69,8 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 /* ── Layout ── */
-.container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-
+<!--.container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }-->
+.container { max-width: min(1200px, 92%); margin: 0 auto; padding: 0 2rem; }
 /* ── Navigation ── */
 nav {
   position: sticky;
@@ -188,7 +188,7 @@ nav {
   height: 1px;
   background: linear-gradient(90deg, var(--border-md) 0%, transparent 80%);
   border: none;
-  margin: 2.5rem 0;
+  margin: 1.25rem 0;
 }
 
 /* ── Stats ── */

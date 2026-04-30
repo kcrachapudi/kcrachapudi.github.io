@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5QKVQ3EG20');
   </script>
   <meta charset="UTF-8" />
@@ -17,6 +16,94 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Project Detail Cards ── */
+    .proj-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 2rem;
+    }
+
+    .proj-detail-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-top: 2.5px solid var(--ind-border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .proj-detail-card:hover {
+      border-color: var(--border-accent);
+      border-top-color: var(--accent-mid);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .proj-card-header {
+      padding: 1rem 1.15rem 0.75rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .proj-card-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+    .proj-card-summary {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .proj-card-body {
+      padding: 0.75rem 1.15rem;
+      flex: 1;
+    }
+    .proj-card-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .proj-card-body ul li {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      padding-left: 14px;
+      position: relative;
+    }
+    .proj-card-body ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent-mid);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .proj-card-footer {
+      padding: 0.65rem 1.15rem 0.9rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .proj-card-footer .tag-row {
+      flex-wrap: wrap;
+    }
+
+    .placeholder-card {
+      opacity: 0.45;
+    }
+    .placeholder-card .proj-card-title {
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .proj-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -28,89 +115,167 @@
   <a href="index.html" class="back-link">← Back to home</a>
 
   <div class="domain-header">
-    <p class="eyebrow">Technical · Platform</p>
+    <p class="eyebrow">Platform · Domain</p>
     <h1 class="domain-title">DevOps</h1>
-    <p class="domain-desc">Infrastructure as code, container orchestration, and CI/CD pipelines — building reliable, automated, and scalable deployment platforms on AWS and Kubernetes.</p>
-  </div>
-<!--
-  <hr class="divider" />
-  
-  <p class="section-label">Architecture &amp; writeups</p>
-  <div class="arch-list">
-
-    <div class="arch-card">
-      <div class="arch-icon">🚀</div>
-      <div class="arch-body">
-        <p class="arch-title">GitOps with ArgoCD on EKS</p>
-        <p class="arch-sub">Fully declarative GitOps deployment pipeline. App manifests in Git, ArgoCD syncs to EKS clusters across dev/staging/prod with automated rollbacks.</p>
-      </div>
-      <a href="https://github.com/yourusername/gitops-argocd" target="_blank" class="github-badge">GitHub ↗</a>
-    </div>
-
-    <div class="arch-card">
-      <div class="arch-icon">🏗️</div>
-      <div class="arch-body">
-        <p class="arch-title">Terraform Modules — AWS Landing Zone</p>
-        <p class="arch-sub">Reusable Terraform modules for VPC, EKS, RDS, and IAM patterns implementing AWS Well-Architected Framework across multi-account org.</p>
-      </div>
-      <a href="https://github.com/yourusername/terraform-aws-landing-zone" target="_blank" class="github-badge">GitHub ↗</a>
-    </div>
-
-    <div class="arch-card">
-      <div class="arch-icon">📄</div>
-      <div class="arch-body">
-        <p class="arch-title">Zero-Downtime Deployment Strategy</p>
-        <p class="arch-sub">Blue/green and canary deployment patterns implemented with ALB weighted routing, feature flags, and automated smoke tests.</p>
-      </div>
-      <a href="#" class="pdf-badge">PDF writeup ↗</a>
-    </div>
-
+    <p class="domain-desc">Infrastructure as code, container orchestration, and CI/CD pipelines — building reliable, automated, and scalable deployment platforms on Cloud, Docker and Kubernetes and VMware.</p>
   </div>
 
   <hr class="divider" />
 
-  <p class="section-label">Infrastructure diagrams</p>
+  <p class="section-label">Projects</p>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Self-Hosted Kubernetes Cluster (Multi-Node + Observability)</p>
+        <p class="proj-card-summary">Production-style 3-node Kubernetes cluster built from scratch with full observability stack and autoscaling validation.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a 3-node Kubernetes cluster (1 control plane, 2 workers) using kubeadm on Ubuntu VMs with Flannel CNI for networking.</li>
+          <li>Implemented workload scaling using Horizontal Pod Autoscaler (HPA) based on CPU utilization, validating pod rescheduling and cluster self-healing.</li>
+          <li>Deployed Prometheus and Grafana for monitoring, creating dashboards for node, pod, and resource metrics.</li>
+          <li>Troubleshot and resolved networking, CNI, and cluster configuration issues in a real bare-metal environment.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span class="tag">Flannel</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Linux</span><span class="tag">kubectl</span><span class="tag">HPA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Cloud-Native DevOps — FastAPI on AWS (EKS + CI/CD)</p>
+        <p class="proj-card-summary">End-to-end cloud-native deployment pipeline for a containerized FastAPI application using AWS EKS and automated CI/CD via GitHub Actions.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Developed a REST API using FastAPI, containerized with Docker, and built a CI/CD pipeline using GitHub Actions to push images to Amazon ECR.</li>
+          <li>Provisioned and managed a Kubernetes cluster using Amazon EKS for production-grade container orchestration.</li>
+          <li>Debugged and resolved real-world issues including Docker permissions, build context errors, AWS authentication, and Kubernetes networking.</li>
+          <li>Validated full pipeline: code change → automated build → push to ECR → deployment to EKS → live update in browser.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Amazon EKS</span><span class="tag">Amazon ECR</span><span class="tag">GitHub Actions</span><span class="tag">AWS CLI</span><span class="tag">Linux</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Cloud-Native Platform with Observability &amp; IaC</p>
+        <p class="proj-card-summary">Full DevOps platform combining containerized APIs, infrastructure-as-code provisioning, CI/CD automation, and live monitoring dashboards.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a containerized Python REST API using FastAPI and Docker.</li>
+          <li>Designed an end-to-end CI/CD pipeline with GitHub Actions for automated build, test, and deployment.</li>
+          <li>Provisioned AWS infrastructure using Terraform, including compute, networking, and Kubernetes cluster.</li>
+          <li>Deployed and managed workloads on Kubernetes with support for scaling, service discovery, and rolling updates.</li>
+          <li>Implemented monitoring with Prometheus and created operational dashboards using Grafana.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">AWS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">End-to-End CI/CD Pipeline (.NET Web API)</p>
+        <p class="proj-card-summary">Multi-environment CI/CD pipeline for a containerized C# .NET REST API with automated builds, image management, and Nginx reverse proxy routing.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a CI/CD pipeline for a containerized C# (.NET) REST API integrated with SQL Server.</li>
+          <li>Automated build, Docker image creation, tagging (dev/staging/prod), and deployment using GitHub Actions.</li>
+          <li>Pushed and managed images in Docker Hub with secure credential handling via GitHub Secrets.</li>
+          <li>Deployed multi-environment containers on Linux using Docker with Watchtower for automated image updates.</li>
+          <li>Configured Nginx reverse proxy with hostname-based routing across environments.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">C#</span><span class="tag">.NET</span><span class="tag">SQL Server</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Docker Hub</span><span class="tag">Nginx</span><span class="tag">Linux</span><span class="tag">Watchtower</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Django Workflow Management System (IIS + SQL Server)</p>
+        <p class="proj-card-summary">Full-stack Django application deployed on Windows IIS with SQL Server backend, covering end-to-end deployment, authentication, and production configuration.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built and deployed a full-stack Django application with SQL Server backend on Windows IIS.</li>
+          <li>Implemented full CRUD functionality, dynamic UI, and user authentication and authorization.</li>
+          <li>Integrated SQL Server using pyodbc and configured Django Admin for data management.</li>
+          <li>Deployed via IIS using HttpPlatformHandler, handling routing, static files, and environment setup.</li>
+          <li>Resolved deployment challenges across IIS configuration, database connectivity, and application stability.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQL Server</span><span class="tag">IIS</span><span class="tag">pyodbc</span><span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card placeholder-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Coming Soon</p>
+        <p class="proj-card-summary">A new project will be added here shortly.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Placeholder — replace with your next DevOps project.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">TBD</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!--
+  <p class="section-label">Cloud &amp; infrastructure</p>
   <div class="projects-grid">
 
     <div class="project-card">
-      <div class="card-top"><div class="card-icon c6">⚙️</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">EKS Multi-tenant Cluster</p>
-      <p class="card-desc">Production Kubernetes cluster with namespace isolation, RBAC, NetworkPolicy, resource quotas, and Cluster Autoscaler.</p>
-      <div class="tag-row"><span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">RBAC</span><span class="tag">Karpenter</span></div>
+      <div class="card-top"><div class="card-icon c4">☁️</div><span class="diagram-badge">Diagram</span></div>
+      <p class="card-name">EKS Cluster — DevOps Workloads</p>
+      <p class="card-desc">Multi-tenant Kubernetes cluster with RBAC, namespacing, and autoscaling for CI/CD workloads.</p>
+      <div class="tag-row"><span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">Terraform</span></div>
     </div>
 
     <div class="project-card">
-      <div class="card-top"><div class="card-icon c6">🔄</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">GitHub Actions CI/CD Pipeline</p>
-      <p class="card-desc">Multi-stage pipeline: lint → test → build → push to ECR → deploy to EKS with environment promotion gates.</p>
-      <div class="tag-row"><span class="tag">GitHub Actions</span><span class="tag">ECR</span><span class="tag">EKS</span></div>
+      <div class="card-top"><div class="card-icon c5">⚙️</div><span class="diagram-badge">Diagram</span></div>
+      <p class="card-name">GitHub Actions Pipeline Architecture</p>
+      <p class="card-desc">End-to-end CI/CD pipeline architecture diagram covering build, test, push, and deploy stages.</p>
+      <div class="tag-row"><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">ECR</span></div>
     </div>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c3">🌐</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">Service Mesh with Istio</p>
-      <p class="card-desc">Istio service mesh for mTLS between services, traffic management, and Kiali topology visualization across 40+ microservices.</p>
-      <div class="tag-row"><span class="tag">Istio</span><span class="tag">Kiali</span><span class="tag">Envoy</span></div>
-    </div>
-
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c4">🔐</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">Secrets Management with Vault</p>
-      <p class="card-desc">HashiCorp Vault deployed on Kubernetes with dynamic secrets, AWS auth backend, and Vault Agent sidecar injection.</p>
-      <div class="tag-row"><span class="tag">Vault</span><span class="tag">Kubernetes</span><span class="tag">AWS Auth</span></div>
-    </div>
-
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c5">📦</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">Docker Compose → Kubernetes Migration</p>
-      <p class="card-desc">Lift-and-shift playbook for migrating a 12-service Docker Compose app to Kubernetes with Kompose and Helm charts.</p>
-      <div class="tag-row"><span class="tag">Docker</span><span class="tag">Kompose</span><span class="tag">Helm</span></div>
-    </div>
-    
   </div>
--->
-</div>
+  -->
 
+</div>
 </main>
 
 <script src="footer.js"></script>

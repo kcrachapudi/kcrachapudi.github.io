@@ -16,87 +16,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* ── Project Detail Cards ── */
-    .proj-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 2rem;
-    }
-
-    .proj-detail-card {
-      background: var(--bg-card);
-      border: 0.5px solid var(--border);
-      border-top: 2.5px solid var(--ind-border);
-      border-radius: var(--radius-lg);
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
-    }
-    .proj-detail-card:hover {
-      border-color: var(--border-accent);
-      border-top-color: var(--accent-mid);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .proj-card-header {
-      padding: 1rem 1.15rem 0.75rem;
-      border-bottom: 0.5px solid var(--border);
-    }
-    .proj-card-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.35;
-      margin-bottom: 5px;
-    }
-    .proj-card-summary {
-      font-size: 12px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .proj-card-body {
-      padding: 0.75rem 1.15rem;
-      flex: 1;
-    }
-    .proj-card-body ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .proj-card-body ul li {
-      font-size: 11.5px;
-      color: var(--text-secondary);
-      line-height: 1.55;
-      padding-left: 14px;
-      position: relative;
-    }
-    .proj-card-body ul li::before {
-      content: '·';
-      position: absolute;
-      left: 0;
-      color: var(--accent-mid);
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .proj-card-footer {
-      padding: 0.65rem 1.15rem 0.9rem;
-      border-top: 0.5px solid var(--border);
-    }
-    .proj-card-footer .tag-row {
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 600px) {
-      .proj-cards-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
@@ -115,33 +34,77 @@
 
   <hr class="divider" />
 
-  <p class="section-label">Live demos</p>
-  <div class="projects-grid">
+  <p class="section-label">Live Demos</p>
+  <div class="demo-cards-grid">
 
-    <a href="https://medistream-ai-ready-medical-imaging-pipeline.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c1">⚕️</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">MediStream AI Ready Medical Imaging Pipeline</p>
-      <p class="card-desc">End-to-end medical imaging pipeline with DICOM processing and AI-ready data transformation.</p>
-      <div class="tag-row">
-        <span class="tag">Python</span><span class="tag">PyDicom</span><span class="tag">Plotly</span><span class="tag">Pandas</span>
+    <a href="https://medistream-ai-ready-medical-imaging-pipeline.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">MediStream AI Ready Medical Imaging Pipeline</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">End-to-end medical imaging pipeline converting DICOM data into AI-ready formats (NIfTI, RTSTRUCT) with PyDicom ingestion, SimpleITK denoising, multi-modality normalization, and simulated AI segmentation workflows.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Built a DICOM ingestion engine using PyDicom with defensive logic for non-standard and missing PACS headers.</li>
+          <li>Applied biomedical image processing using SimpleITK (curvature flow, Gaussian smoothing) to denoise scans while preserving anatomical features.</li>
+          <li>Engineered multi-modality handling (Ultrasound/NM) with LUT de-indexing and JPEG2000 decoding, normalizing to grayscale float32 format.</li>
+          <li>Simulated AI segmentation workflows using NumPy/SciPy morphological operations for high-quality ROI mask generation.</li>
+          <li>Built a dynamic clinical data visualization interface using Streamlit for interactive exploration.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">DICOM</span><span class="tag">PyDicom</span><span class="tag">SimpleITK</span><span class="tag">NIfTI</span><span class="tag">RTSTRUCT</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Streamlit</span>
+        </div>
       </div>
     </a>
 
-    <a href="https://bioinform1.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c3">🧬</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Genomics Variant Explorer</p>
-      <p class="card-desc">Interactive visualization of variants across cohorts with filtering, annotation, and CSV export.</p>
-      <div class="tag-row">
-        <span class="tag">BioPython</span><span class="tag">Pandas</span><span class="tag">Plotly</span>
+    <a href="https://bioinform1.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">NGS Quality Control Dashboard (BioInform1)</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">Interactive NGS quality control dashboard that runs FastQC pipelines on FASTQ data and visualizes sequencing metrics including Phred quality scores and GC content distribution.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Built a Streamlit-based pipeline runner accepting sample or uploaded FASTQ files and executing FastQC quality analysis.</li>
+          <li>Implemented FastQC ZIP parser to extract per-base sequence quality and GC content sections from results.</li>
+          <li>Visualized Phred quality scores (Q20/Q30) and GC content distribution using interactive line and bar charts.</li>
+          <li>Designed multi-page navigation (Run Pipeline, QC Metrics, About) with real-time spinner feedback and structured metric summaries.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">FastQC</span><span class="tag">Pandas</span><span class="tag">BioPython</span><span class="tag">FASTQ</span>
+        </div>
       </div>
     </a>
 
-    <a href="https://bioinform2.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c1">🩺</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">VCF Variant Explorer</p>
-      <p class="card-desc">Process VCF files and visualize genetic variants across cohorts with filtering, annotation, and CSV export.</p>
-      <div class="tag-row">
-        <span class="tag">Streamlit</span><span class="tag">Altair</span><span class="tag">Pandas</span>
+    <a href="https://bioinform2.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">VCF Variant Calling Pipeline (BioInform2)</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">End-to-end variant calling pipeline that ingests FASTQ data, runs variant detection, parses VCF output, and provides interactive filtering and visualization of genetic variants.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Built a FASTQ ingestion layer with file upload support, raw read inspection, and structured preview of sequencing records.</li>
+          <li>Integrated a variant calling pipeline producing VCF output with cloud demo mode using precomputed results.</li>
+          <li>Implemented interactive VCF filtering by genomic position range and ALT frequency using Streamlit sliders.</li>
+          <li>Visualized variant distribution by position and ALT frequency with bar and line charts.</li>
+          <li>Enabled filtered results export as downloadable CSV for downstream analysis.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">VCF</span><span class="tag">Pandas</span><span class="tag">FASTQ</span><span class="tag">Altair</span>
+        </div>
       </div>
     </a>
 

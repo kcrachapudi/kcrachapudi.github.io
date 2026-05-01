@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5QKVQ3EG20');
   </script>
   <meta charset="UTF-8" />
@@ -30,108 +29,195 @@
   <div class="domain-header">
     <p class="eyebrow">Technical · Platform</p>
     <h1 class="domain-title">Observability &amp; SIEM</h1>
-    <p class="domain-desc">Monitoring, logging, tracing, and security event management — building full-stack observability across distributed systems using Splunk, Datadog, ELK, and Grafana.</p>
+    <p class="domain-desc">Monitoring, logging, tracing, and security event management — building full-stack observability across distributed systems using Splunk, AppDynamics, DynaTrace, and custom ML-powered dashboards.</p>
   </div>
 
   <hr class="divider" />
 
-    <p class="section-label">Live demos</p>
-  <div class="projects-grid">
+  <p class="section-label">Live Demos</p>
+  <div class="demo-cards-grid">
 
-    <a href="https://observability-log-anomaly.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c4">🛡️</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Observability Log Anomaly Detector</p>
-      <p class="card-desc">Unsupervised ML-powered log anomaly detection dashboard built with Streamlit, scikit-learn, and Plotly</p>
-      <div class="tag-row">
-        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">Scikit-learn</span>
+    <a href="https://observability-log-anomaly.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">LogSentinel — Log Anomaly Detector</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">Unsupervised ML-powered log anomaly detection dashboard simulating a production microservice log stream and flagging anomalous events using Isolation Forest — no labelled training data required.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Generated synthetic log streams across 7 microservices with correlated anomaly signals — response time spikes, CPU saturation, HTTP error codes — matching real production incident patterns.</li>
+          <li>Applied Isolation Forest (scikit-learn) with configurable contamination rate to detect anomalies across 5 features without pre-labelled data.</li>
+          <li>Built an interactive SOC-style dashboard with anomaly timeline, scatter plot (score vs latency), per-service bar chart, severity donut, and a color-coded scrollable log feed.</li>
+          <li>Implemented a live streaming mode using st.empty() placeholders to simulate real-time log tail with millisecond-precision timestamps.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Isolation Forest</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">Streamlit</span>
+        </div>
       </div>
     </a>
 
-    <a href="https://observability-slo-tracker.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c4">🛡️</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Observability SLO Tracker</p>
-      <p class="card-desc">Real-time tracking and visualization of service-level objectives with automated alerts and reporting.</p>
-      <div class="tag-row">
-        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Plotly</span>
+    <a href="https://observability-slo-tracker.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">BurnWatch — SLI/SLO Error Budget Tracker</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">Google SRE methodology error budget tracking dashboard monitoring 7 SLOs simultaneously with multi-window burn rate analysis, incident detection, and P1/P2/P3 classification.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Tracked 7 SLOs (availability, latency p95/p99, error rate, payment processing, search, pipeline freshness) with real-time error budget bars and Healthy/At Risk/Breach status.</li>
+          <li>Implemented Google SRE multi-window burn rate analysis across 1h, 6h, 1d, and 3d windows with configurable fast-burn (14.4×) and slow-burn (6×) alert thresholds.</li>
+          <li>Built 3-tab layout: Service Metrics (availability, latency percentiles, request volume), Burn Rate Analysis, and Incident Timeline with P1/P2/P3 severity classification.</li>
+          <li>Injected realistic incidents as availability dips with automatic detection and incident log generation showing duration, min availability, and error rate.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Plotly</span><span class="tag">Streamlit</span><span class="tag">SRE</span>
+        </div>
       </div>
     </a>
 
-    <a href="https://observability-threat-dashboard.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c4">🛡️</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Observability Threat Dashboard</p>
-      <p class="card-desc">A SOC-style security threat intelligence dashboard featuring MITRE ATT&CK mapping</p>
-      <div class="tag-row">
-        <span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Pandas</span>
+    <a href="https://observability-threat-dashboard.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">ThreatRadar — Security Threat Dashboard</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">SOC-style security threat intelligence dashboard with MITRE ATT&amp;CK mapping, global attack origin visualization, attack heatmaps, and a live alert feed with confidence scoring.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Generated synthetic threat events across 14 attack categories mapped to MITRE ATT&amp;CK tactics (TA0001–TA0040) covering Initial Access, Lateral Movement, Exfiltration, and Impact.</li>
+          <li>Built a dynamic Threat Score (0–100) calculated from severity-weighted unblocked events, with color-coded risk indicator.</li>
+          <li>Rendered a global attack origin map (scatter_geo), hour-of-day × attack-type heatmap, MITRE ATT&amp;CK treemap, and top-targets bar chart.</li>
+          <li>Built a scrollable active alert feed showing severity, source IP, target service, MITRE tactic, confidence score, and alert ID for unblocked events.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">MITRE ATT&amp;CK</span><span class="tag">Streamlit</span>
+        </div>
       </div>
     </a>
 
   </div>
 
-<hr class="divider" />
+  <hr class="divider" />
 
-  <p class="section-label">Architecture &amp; writeups</p>
-  <div class="arch-list">
+  <p class="section-label">Projects</p>
 
-    <div class="arch-card">
-      <div class="arch-icon">🔍</div>
-      <div class="arch-body">
-        <p class="arch-title">Splunk SIEM — Threat Detection Rules</p>
-        <p class="arch-sub">Custom SPL correlation searches and alert rules for detecting lateral movement, privilege escalation, and data exfiltration patterns.</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Self-Hosted Kubernetes Observability Stack</p>
+        <p class="proj-card-summary">Full observability stack deployed on a self-hosted 3-node Kubernetes cluster using Prometheus and Grafana for node, pod, and resource metric monitoring.</p>
       </div>
-      <a href="https://github.com/yourusername/splunk-detections" target="_blank" class="github-badge">GitHub ↗</a>
+      <div class="proj-card-body">
+        <ul>
+          <li>Deployed Prometheus on Kubernetes for metrics collection across cluster nodes, pods, and resource utilization.</li>
+          <li>Built Grafana dashboards for real-time visualization of node health, pod scheduling, CPU/memory usage, and HPA scaling events.</li>
+          <li>Validated observability stack during live cluster stress tests — autoscaling events, pod rescheduling, and node failures were all captured in dashboards.</li>
+          <li>Troubleshot and resolved Prometheus scrape configuration and Grafana data source connectivity issues in a bare-metal environment.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Kubernetes</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">kubeadm</span><span class="tag">Linux</span>
+        </div>
+      </div>
     </div>
 
-    <div class="arch-card">
-      <div class="arch-icon">📄</div>
-      <div class="arch-body">
-        <p class="arch-title">ELK Stack — Centralized Log Management</p>
-        <p class="arch-sub">Logstash ingestion pipelines, Elasticsearch index lifecycle management, and Kibana dashboards for a 200-node microservices platform.</p>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Cloud-Native DevOps Platform Observability</p>
+        <p class="proj-card-summary">End-to-end monitoring implementation for a cloud-native FastAPI platform on AWS EKS using Prometheus and Grafana alongside CI/CD pipeline observability.</p>
       </div>
-      <a href="#" class="pdf-badge">PDF writeup ↗</a>
-    </div>
-
-    <div class="arch-card">
-      <div class="arch-icon">📄</div>
-      <div class="arch-body">
-        <p class="arch-title">Datadog APM + Distributed Tracing</p>
-        <p class="arch-sub">Full APM instrumentation across a Python/Node microservices mesh with custom span tagging, SLO tracking, and PagerDuty escalation.</p>
+      <div class="proj-card-body">
+        <ul>
+          <li>Implemented Prometheus metrics collection for a containerized FastAPI application deployed on Amazon EKS.</li>
+          <li>Created Grafana operational dashboards covering request rates, error rates, pod health, and deployment rollout status.</li>
+          <li>Integrated monitoring validation into CI/CD pipeline — GitHub Actions deployments include post-deploy health checks before traffic cut-over.</li>
+        </ul>
       </div>
-      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">EKS</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span>
+        </div>
+      </div>
     </div>
 
   </div>
 
   <hr class="divider" />
 
-  <p class="section-label">Dashboards &amp; infrastructure diagrams</p>
-  <div class="projects-grid">
+  <p class="section-label">BANK OF AMERICA · LOANIQ</p>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c4">📉</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">Grafana Observability Stack</p>
-      <p class="card-desc">Prometheus + Grafana stack with custom dashboards for infrastructure metrics, SLI/SLO tracking, and error budget burn rates.</p>
-      <div class="tag-row"><span class="tag">Grafana</span><span class="tag">Prometheus</span><span class="tag">Loki</span></div>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Observability &amp; APM — Splunk, AppDynamics, DynaTrace</p>
+        <p class="proj-card-summary">Full-stack observability across the LoanIQ enterprise platform using Splunk for log aggregation and SIEM, AppDynamics for APM, and DynaTrace for synthetic health monitoring and heartbeats.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Used Splunk to aggregate and analyze server, application, and API logs — enabling rapid triage of production incidents and reducing mean time to resolution.</li>
+          <li>Leveraged AppDynamics for Application Performance Monitoring (APM) and infrastructure-level health tracking across the LoanIQ environment estate.</li>
+          <li>Ran DynaTrace heartbeats and synthetic health checks across IIS web apps and web services as the primary real-time availability signal.</li>
+          <li>Configured alerting and escalation workflows to engage on-call teams during failures, with structured runbooks for common incident patterns.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Splunk</span><span class="tag">AppDynamics</span><span class="tag">DynaTrace</span><span class="tag">IIS</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c4">🛡️</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">AWS Security Lake + Splunk Integration</p>
-      <p class="card-desc">OCSF-normalized security log aggregation from AWS services into Splunk via Kinesis Firehose and S3.</p>
-      <div class="tag-row"><span class="tag">Security Lake</span><span class="tag">Kinesis</span><span class="tag">Splunk</span></div>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ IIS Health Monitoring &amp; RCA</p>
+        <p class="proj-card-summary">Continuous health monitoring, root cause analysis, and incident resolution for LoanIQ IIS-hosted web applications and web services across production and lower-level environments.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Monitored LTM (F5 Load Balancer) health and Is-Alive pings to IIS applications as a first-line availability indicator.</li>
+          <li>Performed root cause analysis on App/API failures — isolating issues across IIS application pools, SQL Server backends, and network/LTM layers.</li>
+          <li>Managed application pool maintenance: taking nodes out of rotation, applying fixes, running validation, and returning to service.</li>
+          <li>Validated fixes and restores using SoapUI and Postman for web service endpoint testing across all environments.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">IIS</span><span class="tag">DynaTrace</span><span class="tag">LTM</span><span class="tag">F5</span><span class="tag">SoapUI</span><span class="tag">Postman</span><span class="tag">SQL Server</span>
+        </div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c3">🔔</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">Incident Response Runbook Automation</p>
-      <p class="card-desc">PagerDuty + Rundeck automated runbooks triggered by Datadog alerts, reducing MTTR by 60%.</p>
-      <div class="tag-row"><span class="tag">PagerDuty</span><span class="tag">Datadog</span><span class="tag">Rundeck</span></div>
-    </div>
-
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c5">📋</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">OpenTelemetry Collector Pipeline</p>
-      <p class="card-desc">Vendor-agnostic telemetry pipeline collecting traces, metrics, and logs and routing to Datadog + Jaeger backends.</p>
-      <div class="tag-row"><span class="tag">OpenTelemetry</span><span class="tag">Jaeger</span><span class="tag">Datadog</span></div>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Log Management &amp; Auto-Healing Automation</p>
+        <p class="proj-card-summary">PowerShell and Python automation suite for log lifecycle management, auto-healing of IIS and Windows services, and proactive disk and performance issue prevention across the LoanIQ server estate.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built log management automation handling cleanup, retention policies, and log analysis to prevent disk saturation on application servers.</li>
+          <li>Engineered auto-healing scripts for IIS application pools and Windows services — detecting failures and triggering conditional restarts with structured logging.</li>
+          <li>Developed Python-based diagnostic scripts for SQL Server connectivity checks and performance baseline monitoring.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">PowerShell</span><span class="tag">Python</span><span class="tag">IIS</span><span class="tag">SQL Server</span><span class="tag">Windows</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
     </div>
 
   </div>

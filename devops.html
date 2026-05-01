@@ -16,94 +16,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* ── Project Detail Cards ── */
-    .proj-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 2rem;
-    }
-
-    .proj-detail-card {
-      background: var(--bg-card);
-      border: 0.5px solid var(--border);
-      border-top: 2.5px solid var(--ind-border);
-      border-radius: var(--radius-lg);
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
-    }
-    .proj-detail-card:hover {
-      border-color: var(--border-accent);
-      border-top-color: var(--accent-mid);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .proj-card-header {
-      padding: 1rem 1.15rem 0.75rem;
-      border-bottom: 0.5px solid var(--border);
-    }
-    .proj-card-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.35;
-      margin-bottom: 5px;
-    }
-    .proj-card-summary {
-      font-size: 12px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .proj-card-body {
-      padding: 0.75rem 1.15rem;
-      flex: 1;
-    }
-    .proj-card-body ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .proj-card-body ul li {
-      font-size: 11.5px;
-      color: var(--text-secondary);
-      line-height: 1.55;
-      padding-left: 14px;
-      position: relative;
-    }
-    .proj-card-body ul li::before {
-      content: '·';
-      position: absolute;
-      left: 0;
-      color: var(--accent-mid);
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .proj-card-footer {
-      padding: 0.65rem 1.15rem 0.9rem;
-      border-top: 0.5px solid var(--border);
-    }
-    .proj-card-footer .tag-row {
-      flex-wrap: wrap;
-    }
-
-    .placeholder-card {
-      opacity: 0.45;
-    }
-    .placeholder-card .proj-card-title {
-      font-style: italic;
-    }
-
-    @media (max-width: 600px) {
-      .proj-cards-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
@@ -115,9 +27,9 @@
   <a href="index.html" class="back-link">← Back to home</a>
 
   <div class="domain-header">
-    <p class="eyebrow">Platform · Domain</p>
+    <p class="eyebrow">Technical · Platform</p>
     <h1 class="domain-title">DevOps</h1>
-    <p class="domain-desc">Infrastructure as code, container orchestration, and CI/CD pipelines — building reliable, automated, and scalable deployment platforms on Cloud, Docker and Kubernetes and VMware.</p>
+    <p class="domain-desc">Infrastructure as code, container orchestration, and CI/CD pipelines — building reliable, automated, and scalable deployment platforms on Cloud, Docker, Kubernetes, and Windows.</p>
   </div>
 
   <hr class="divider" />
@@ -141,7 +53,7 @@
       </div>
       <div class="proj-card-footer">
         <div class="tag-row">
-          <span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span class="tag">Flannel</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Linux</span><span class="tag">kubectl</span><span class="tag">HPA</span>
+          <span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span class="tag">Flannel</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Linux</span><span class="tag">HPA</span>
         </div>
       </div>
     </div>
@@ -156,12 +68,12 @@
           <li>Developed a REST API using FastAPI, containerized with Docker, and built a CI/CD pipeline using GitHub Actions to push images to Amazon ECR.</li>
           <li>Provisioned and managed a Kubernetes cluster using Amazon EKS for production-grade container orchestration.</li>
           <li>Debugged and resolved real-world issues including Docker permissions, build context errors, AWS authentication, and Kubernetes networking.</li>
-          <li>Validated full pipeline: code change → automated build → push to ECR → deployment to EKS → live update in browser.</li>
+          <li>Validated full pipeline: code change → automated build → push to ECR → deployment to EKS → live update confirmed.</li>
         </ul>
       </div>
       <div class="proj-card-footer">
         <div class="tag-row">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Amazon EKS</span><span class="tag">Amazon ECR</span><span class="tag">GitHub Actions</span><span class="tag">AWS CLI</span><span class="tag">Linux</span>
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Amazon EKS</span><span class="tag">Amazon ECR</span><span class="tag">GitHub Actions</span><span class="tag">AWS CLI</span>
         </div>
       </div>
     </div>
@@ -173,11 +85,10 @@
       </div>
       <div class="proj-card-body">
         <ul>
-          <li>Built a containerized Python REST API using FastAPI and Docker.</li>
-          <li>Designed an end-to-end CI/CD pipeline with GitHub Actions for automated build, test, and deployment.</li>
-          <li>Provisioned AWS infrastructure using Terraform, including compute, networking, and Kubernetes cluster.</li>
-          <li>Deployed and managed workloads on Kubernetes with support for scaling, service discovery, and rolling updates.</li>
-          <li>Implemented monitoring with Prometheus and created operational dashboards using Grafana.</li>
+          <li>Built a containerized Python FastAPI REST API with Docker and an end-to-end CI/CD pipeline via GitHub Actions.</li>
+          <li>Provisioned AWS infrastructure using Terraform — compute, networking, and Kubernetes cluster.</li>
+          <li>Deployed and managed workloads on Kubernetes with scaling, service discovery, and rolling updates.</li>
+          <li>Implemented Prometheus monitoring and Grafana operational dashboards for platform health visibility.</li>
         </ul>
       </div>
       <div class="proj-card-footer">
@@ -198,16 +109,15 @@
       </div>
       <div class="proj-card-body">
         <ul>
-          <li>Built a CI/CD pipeline for a containerized C# (.NET) REST API integrated with SQL Server.</li>
-          <li>Automated build, Docker image creation, tagging (dev/staging/prod), and deployment using GitHub Actions.</li>
-          <li>Pushed and managed images in Docker Hub with secure credential handling via GitHub Secrets.</li>
+          <li>Built a CI/CD pipeline for a containerized C# .NET REST API integrated with SQL Server.</li>
+          <li>Automated build, Docker image creation, tagging (dev/staging/prod), and deployment using GitHub Actions with secure credential handling via GitHub Secrets.</li>
           <li>Deployed multi-environment containers on Linux using Docker with Watchtower for automated image updates.</li>
           <li>Configured Nginx reverse proxy with hostname-based routing across environments.</li>
         </ul>
       </div>
       <div class="proj-card-footer">
         <div class="tag-row">
-          <span class="tag">C#</span><span class="tag">.NET</span><span class="tag">SQL Server</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Docker Hub</span><span class="tag">Nginx</span><span class="tag">Linux</span><span class="tag">Watchtower</span>
+          <span class="tag">C#</span><span class="tag">.NET</span><span class="tag">SQL Server</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Nginx</span><span class="tag">Watchtower</span>
         </div>
       </div>
     </div>
@@ -219,33 +129,34 @@
       </div>
       <div class="proj-card-body">
         <ul>
-          <li>Built and deployed a full-stack Django application with SQL Server backend on Windows IIS.</li>
-          <li>Implemented full CRUD functionality, dynamic UI, and user authentication and authorization.</li>
-          <li>Integrated SQL Server using pyodbc and configured Django Admin for data management.</li>
-          <li>Deployed via IIS using HttpPlatformHandler, handling routing, static files, and environment setup.</li>
-          <li>Resolved deployment challenges across IIS configuration, database connectivity, and application stability.</li>
+          <li>Built and deployed a full-stack Django application with SQL Server backend on Windows IIS using HttpPlatformHandler.</li>
+          <li>Implemented full CRUD functionality, dynamic UI, and user authentication and authorization with Django Admin for data management.</li>
+          <li>Resolved deployment challenges across IIS configuration, static file handling, database connectivity, and application stability.</li>
         </ul>
       </div>
       <div class="proj-card-footer">
         <div class="tag-row">
-          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQL Server</span><span class="tag">IIS</span><span class="tag">pyodbc</span><span class="tag">HTML/CSS</span>
+          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQL Server</span><span class="tag">IIS</span><span class="tag">pyodbc</span>
         </div>
       </div>
     </div>
 
-    <div class="proj-detail-card placeholder-card">
+    <div class="proj-detail-card">
       <div class="proj-card-header">
-        <p class="proj-card-title">Coming Soon</p>
-        <p class="proj-card-summary">A new project will be added here shortly.</p>
+        <p class="proj-card-title">Healthcare Data Platform — DevOps &amp; Deployment</p>
+        <p class="proj-card-summary">DevOps and deployment layer for the healthcare data ELT/ETL platform — Terraform-provisioned GCP infrastructure, Docker containerization, and Airflow-orchestrated pipeline deployment.</p>
       </div>
       <div class="proj-card-body">
         <ul>
-          <li>Placeholder — replace with your next DevOps project.</li>
+          <li>Provisioned GCP infrastructure (Cloud Run, BigQuery, Pub/Sub) using Terraform with IAM roles and Secret Manager for secrets handling.</li>
+          <li>Containerized the FastAPI ingestion engine and dbt transformation layer using Docker for consistent deployment across environments.</li>
+          <li>Deployed and managed Apache Airflow DAGs for orchestrating batch and real-time pipeline workflows.</li>
+          <li>Implemented environment separation (dev/staging/prod) with pipeline validation gates before promotion.</li>
         </ul>
       </div>
       <div class="proj-card-footer">
         <div class="tag-row">
-          <span class="tag">TBD</span>
+          <span class="tag">Terraform</span><span class="tag">GCP</span><span class="tag">Docker</span><span class="tag">Airflow</span><span class="tag">Cloud Run</span><span class="tag">GitHub Actions</span>
         </div>
       </div>
     </div>
@@ -254,26 +165,69 @@
 
   <hr class="divider" />
 
-  <!--
-  <p class="section-label">Cloud &amp; infrastructure</p>
-  <div class="projects-grid">
+  <p class="section-label">BANK OF AMERICA · LOANIQ</p>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c4">☁️</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">EKS Cluster — DevOps Workloads</p>
-      <p class="card-desc">Multi-tenant Kubernetes cluster with RBAC, namespacing, and autoscaling for CI/CD workloads.</p>
-      <div class="tag-row"><span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">Terraform</span></div>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Infrastructure &amp; Applications Automation</p>
+        <p class="proj-card-summary">PowerShell and Python automation suite for application deployment, monitoring, and reliability across the LoanIQ Windows, IIS, and SQL Server estate — built across both BofA stints.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Automated IIS .NET application deployments with controlled restarts, pre/post health checks, structured logging, and failure recovery.</li>
+          <li>Developed SQL Server automation for backups, restores, connectivity validation, and Python-based diagnostic scripts.</li>
+          <li>Engineered auto-healing for IIS application pools and Windows services with conditional restart logic and failure alerting.</li>
+          <li>Built log management automation (cleanup, retention, analysis) to prevent disk saturation and performance degradation.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">PowerShell</span><span class="tag">Python</span><span class="tag">IIS</span><span class="tag">SQL Server</span><span class="tag">Windows</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c5">⚙️</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">GitHub Actions Pipeline Architecture</p>
-      <p class="card-desc">End-to-end CI/CD pipeline architecture diagram covering build, test, push, and deploy stages.</p>
-      <div class="tag-row"><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">ECR</span></div>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Deployment BAU &amp; NO-GO Playbook</p>
+        <p class="proj-card-summary">Structured deployment execution and rollback operations for the LoanIQ platform — covering database validation, IIS health checks, deployment sign-off, and NO-GO recovery procedures.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Executed deployment validation workflows — bringing database servers online, verifying SQL replication, and confirming stored procedure fixes against expected outcomes.</li>
+          <li>Ran IIS server health checks and heartbeats across web apps and web services post-deployment before issuing greenlight.</li>
+          <li>Managed NO-GO playbooks when deployments failed — reverting changes, restarting all servers and apps, and restoring BAU status.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">LoanIQ</span><span class="tag">IIS</span><span class="tag">SQL Server</span><span class="tag">DynaTrace</span><span class="tag">Windows</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ IIS Web Apps Setup &amp; Windows Migration</p>
+        <p class="proj-card-summary">End-to-end IIS server setup, load balancer configuration, and migration of LoanIQ web applications and services from Windows Server 2008 to Windows Server 2016.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Set up IIS servers from scratch including application pool configuration, load balancing setup with the LTM (F5) team, and stickiness/persistence validation.</li>
+          <li>Migrated web apps and web services from Windows Server 2008 to Windows Server 2016, updating all configurations to point to new middleware and database endpoints.</li>
+          <li>Validated migrated applications through content verification, web service testing with SoapUI and Postman, and LTM health confirmation.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">IIS</span><span class="tag">Windows Server</span><span class="tag">LTM</span><span class="tag">F5</span><span class="tag">SoapUI</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
     </div>
 
   </div>
-  -->
 
 </div>
 </main>

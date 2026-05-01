@@ -7,12 +7,11 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5QKVQ3EG20');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Engineering — Your Name</title>
+  <title>Data Engineering — Kalyan Rachapudi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
@@ -34,77 +33,114 @@
   </div>
 
   <hr class="divider" />
-  <!--
-  <p class="section-label">Live demos — Streamlit</p>
-  <div class="projects-grid">
 
-    <a href="https://your-streamlit-link.streamlit.app" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c4">🔁</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Pipeline Lineage Visualizer</p>
-      <p class="card-desc">Interactive DAG explorer showing data lineage across Airflow pipelines with run history and SLA tracking.</p>
-      <div class="tag-row"><span class="tag">Airflow</span><span class="tag">NetworkX</span><span class="tag">Plotly</span></div>
-    </a>
+  <p class="section-label">Projects</p>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Real-Time Kafka Streaming Pipeline (X12 Claims)</p>
+        <p class="proj-card-summary">High-throughput streaming data pipeline ingesting X12 financial and healthcare EDI data via Apache Kafka into a Bronze/Silver/Gold medallion architecture on AWS.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Architected an end-to-end Kafka streaming pipeline for real-time EDI message ingestion with at-least-once delivery guarantees.</li>
+          <li>Implemented modular Python consumers with custom X12 parsing logic to transform raw EDI into structured data.</li>
+          <li>Designed a Bronze/Silver/Gold medallion architecture using AWS S3 and Amazon RDS PostgreSQL for tiered data quality and analytics access.</li>
+          <li>Processed large-scale batch data via Spark on Databricks alongside the real-time streaming layer.</li>
+          <li>Developed Gold layer SQL models supporting regulatory metrics and downstream reporting.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">Databricks</span><span class="tag">AWS S3</span><span class="tag">AWS RDS</span><span class="tag">PostgreSQL</span><span class="tag">X12</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Healthcare ELT/ETL Pipeline (dbt + Airflow + GCP)</p>
+        <p class="proj-card-summary">Enterprise ELT pipeline integrating multi-format EDI sources (X12, HL7, FHIR) with dbt transformations, Airflow orchestration, and cloud-scale GCP infrastructure.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Developed a FastAPI ingestion engine with plugin-based parsing for ANSI X12 (834/835/837/270/271), HL7 v2, and FHIR R4 formats.</li>
+          <li>Engineered dbt transformation models for data standardization, reconciliation, and regulatory reporting with full lineage tracking.</li>
+          <li>Orchestrated batch and real-time workflows using Apache Airflow, including SFTP dispatch for outbound transactions.</li>
+          <li>Deployed scalable GCP infrastructure (BigQuery, Cloud Run, Pub/Sub) using Terraform with IAM and Secret Manager controls.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">BigQuery</span><span class="tag">Cloud Run</span><span class="tag">Pub/Sub</span><span class="tag">Terraform</span><span class="tag">HL7</span><span class="tag">X12</span><span class="tag">FHIR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">HL7 to FHIR Transformation Pipeline (AWS HealthLake)</p>
+        <p class="proj-card-summary">Serverless, event-driven HL7 ingestion and FHIR transformation pipeline using AWS Lambda, SQS, and HealthLake for clinical data analytics.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Designed an asynchronous, serverless ETL architecture for HL7 message ingestion and transformation using AWS SQS and Lambda.</li>
+          <li>Built a Python Lambda function parsing HL7 message types (ORU, ORM, SIU) and converting them to FHIR R4 bundles.</li>
+          <li>Persisted FHIR bundles to AWS HealthLake and raw messages to S3 with replay capability for ingestion failure recovery.</li>
+          <li>Implemented CloudWatch monitoring for Lambda execution metrics, processing throughput, and error tracking.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Lambda</span><span class="tag">SQS</span><span class="tag">S3</span><span class="tag">HealthLake</span><span class="tag">HL7</span><span class="tag">FHIR</span><span class="tag">CloudWatch</span>
+        </div>
+      </div>
+    </div>
 
   </div>
--->
-  <hr class="divider" />
-<!--
-  <p class="section-label">Architecture &amp; writeups</p>
-  <div class="arch-list">
 
-    <div class="arch-card">
-      <div class="arch-icon">⚡</div>
-      <div class="arch-body">
-        <p class="arch-title">Streaming ETL with Kafka + Spark Structured Streaming</p>
-        <p class="arch-sub">Near real-time ingestion pipeline processing 500K events/min from IoT sensors into a Delta Lake on S3.</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Distributed Event-Driven Clinical Data Pipeline (Kafka + IRIS)</p>
+        <p class="proj-card-summary">Resilient clinical data pipeline decoupling HL7 ingestion from downstream analytics using Apache Kafka, InterSystems IRIS, and Mirth Connect.</p>
       </div>
-      <a href="https://github.com/yourusername/streaming-etl" target="_blank" class="github-badge">GitHub ↗</a>
-    </div>
-
-    <div class="arch-card">
-      <div class="arch-icon">🗂️</div>
-      <div class="arch-body">
-        <p class="arch-title">Medallion Architecture on Databricks</p>
-        <p class="arch-sub">Bronze / Silver / Gold lakehouse pattern with Delta Live Tables, Unity Catalog governance, and dbt transformations.</p>
+      <div class="proj-card-body">
+        <ul>
+          <li>Architected a Dual-Zone Gateway using Mirth Connect for HL7 v2.3.1 message ingestion, validation, and transformation in a DMZ layer.</li>
+          <li>Implemented asynchronous event streaming via Kafka to decouple the clinical data core from downstream consumers with at-least-once delivery.</li>
+          <li>Engineered IRIS Interoperability Production using ObjectScript and BPL for clinical state management and multi-dimensional database persistence.</li>
+          <li>Developed idempotency logic to prevent duplicate HL7 message processing and downstream data corruption.</li>
+        </ul>
       </div>
-      <a href="https://github.com/yourusername/medallion-arch" target="_blank" class="github-badge">GitHub ↗</a>
-    </div>
-
-    <div class="arch-card">
-      <div class="arch-icon">📄</div>
-      <div class="arch-body">
-        <p class="arch-title">CDC Pipeline with Debezium + Kafka</p>
-        <p class="arch-sub">Change data capture from PostgreSQL into a Kafka topic with schema registry, consumed by a downstream Redshift warehouse.</p>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Kafka</span><span class="tag">IRIS</span><span class="tag">Mirth Connect</span><span class="tag">HL7</span><span class="tag">FHIR</span><span class="tag">Docker</span>
+        </div>
       </div>
-      <a href="#" class="pdf-badge">PDF writeup ↗</a>
     </div>
 
-  </div>
--->
-  <hr class="divider" />
-
-  <p class="section-label">Cloud &amp; infrastructure</p>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c4">☁️</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">AWS Glue + Redshift ELT</p>
-      <p class="card-desc">Serverless ELT workflow using Glue crawlers, Glue Studio jobs, and Redshift Spectrum for petabyte-scale queries.</p>
-      <div class="tag-row"><span class="tag">Glue</span><span class="tag">Redshift</span><span class="tag">S3</span><span class="tag">Athena</span></div>
-    </div>
-
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c3">🔗</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">API Integration Hub</p>
-      <p class="card-desc">Event-driven integration layer using API Gateway, Lambda, and SQS to normalize data from 12 third-party SaaS APIs.</p>
-      <div class="tag-row"><span class="tag">API Gateway</span><span class="tag">Lambda</span><span class="tag">SQS</span></div>
-    </div>
-
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c5">🕐</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">Airflow on EKS</p>
-      <p class="card-desc">Production Airflow deployment on Kubernetes with KubernetesExecutor, GitSync DAG loading, and Prometheus metrics.</p>
-      <div class="tag-row"><span class="tag">Airflow</span><span class="tag">EKS</span><span class="tag">Helm</span></div>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">HL7 Parser &amp; FHIR REST API Pipeline</p>
+        <p class="proj-card-summary">End-to-end pipeline to ingest, parse, validate, and convert real-time HL7 messages into FHIR resources exposed via FastAPI with persistent AWS RDS storage.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a custom HL7 v2 parser and validator handling MSH, PID, and PV1 segments with structured error handling and validation stages.</li>
+          <li>Converted HL7 messages into FHIR Patient, Encounter, and Bundle resources following real-world hospital integration patterns.</li>
+          <li>Developed FastAPI RESTful APIs with full CRUD operations, advanced filtering, and persistent storage in AWS RDS PostgreSQL.</li>
+          <li>Built a real-time HL7 message simulator for continuous data streaming and structured pipeline logging.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">AWS RDS</span><span class="tag">PostgreSQL</span><span class="tag">HL7</span><span class="tag">FHIR</span>
+        </div>
+      </div>
     </div>
 
   </div>

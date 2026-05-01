@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best — Component Reference — Kalyan Rachapudi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Reference · Component Library</p>
+    <h1 class="domain-title">Component Reference</h1>
+    <p class="domain-desc">This page is a private reference — all four card component types are preserved here with sample content so the look and feel is never lost. Not linked from the nav.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ SECTION 1: LIVE DEMOS (demo-detail-card) ═══ -->
+  <p class="section-label">Live Demos — demo-detail-card</p>
+  <div class="demo-cards-grid">
+
+    <a href="#" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">Sample Live Demo Application One</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">A one or two sentence summary of what this application does, what problem it solves, and what makes it technically interesting. Keep this tight — no more than two sentences.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>First bullet point — a specific, concrete engineering decision or implementation detail. Avoid vague language.</li>
+          <li>Second bullet point — a metric, algorithm, or architecture choice that demonstrates technical depth.</li>
+          <li>Third bullet point — a user-facing feature or outcome that shows what the app actually does when you interact with it.</li>
+          <li>Fourth bullet point — a challenge resolved, an optimization made, or a design pattern applied.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">Scikit-learn</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">Sample Live Demo Application Two</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">Summary describing a data pipeline demo with real-time ingestion, transformation, and interactive visualization — two sentences maximum, honest and specific.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Implemented a streaming data ingestion layer using a Python generator with configurable throughput and synthetic data profiles.</li>
+          <li>Applied an unsupervised anomaly detection algorithm calibrated with a domain-specific contamination rate.</li>
+          <li>Built a live-updating dashboard with KPI cards, timeline charts, and a scrollable event feed.</li>
+          <li>Used session state management to allow stream pausing and resuming without data loss.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Kafka</span><span class="tag">NumPy</span><span class="tag">Plotly</span><span class="tag">Streamlit</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">Sample Live Demo Application Three</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">Summary for a forecasting or ML demo — describe the model type, input data, and output clearly in two sentences. Avoid repeating what the bullet points say.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Trained a time-series forecasting model on historical data with configurable look-back window and forecast horizon.</li>
+          <li>Built an automated backtesting framework hiding the most recent period to measure forecast precision against actuals.</li>
+          <li>Visualized predictions with confidence intervals and overlaid actuals for intuitive accuracy assessment.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Prophet</span><span class="tag">Pandas</span><span class="tag">Plotly</span><span class="tag">Streamlit</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ SECTION 2: PROJECTS (proj-detail-card) ═══ -->
+  <p class="section-label">Projects — proj-detail-card</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Sample Project Card One — Cloud Pipeline</p>
+        <p class="proj-card-summary">One or two sentence summary of the project — what was built, what problem it solves, what makes it noteworthy. This is the hook before the bullets.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Designed an event-driven serverless architecture using cloud-native messaging and compute services.</li>
+          <li>Built transformation logic handling multiple input formats with validation, error handling, and dead-letter queuing.</li>
+          <li>Implemented monitoring and alerting for pipeline execution, throughput, and failure rates.</li>
+          <li>Ensured reliability with retry mechanisms, idempotency checks, and replay capability from durable storage.</li>
+          <li>Deployed infrastructure using Terraform with environment separation and IAM least-privilege controls.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Lambda</span><span class="tag">SQS</span><span class="tag">S3</span><span class="tag">Terraform</span><span class="tag">CloudWatch</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Sample Project Card Two — Data Platform</p>
+        <p class="proj-card-summary">Summary of a data platform project — what layers were built, what scale or volume was handled, and what the downstream consumers receive.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Architected a Bronze/Silver/Gold medallion data lake with partitioned Parquet storage and schema enforcement at each layer.</li>
+          <li>Ingested high-velocity data streams using Apache Kafka with custom consumer logic and at-least-once delivery guarantees.</li>
+          <li>Developed dbt models for transformation, reconciliation, and regulatory-compliant reporting with full lineage tracking.</li>
+          <li>Orchestrated batch and streaming workflows using Apache Airflow with SLA monitoring and alerting.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">BigQuery</span><span class="tag">Terraform</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Sample Project Card Three — Integration</p>
+        <p class="proj-card-summary">Summary of a system integration project — what systems were connected, what protocols or standards were used, and what business outcome was achieved.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a custom message parser handling multiple industry-standard formats with validation pipeline and structured error handling.</li>
+          <li>Designed an idempotency layer preventing duplicate message processing and downstream data corruption.</li>
+          <li>Exposed transformed data via RESTful APIs with full CRUD, filtering, and pagination support.</li>
+          <li>Implemented real-time message simulation for integration testing and end-to-end pipeline validation.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">HL7</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ SECTION 3: ARCHITECTURE & WRITEUPS (arch-list) ═══ -->
+  <p class="section-label">Architecture &amp; Writeups — arch-card</p>
+  <div class="arch-list">
+
+    <div class="arch-card">
+      <div class="arch-icon">🗂️</div>
+      <div class="arch-body">
+        <p class="arch-title">Sample Architecture Writeup One — Streaming Pipeline</p>
+        <p class="arch-sub">Kafka + Flink streaming pipeline with sub-100ms latency scoring. Feature store backed by Redis, model served via a managed inference endpoint. Full architecture diagram and design decisions documented.</p>
+      </div>
+      <a href="#" class="github-badge">GitHub ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">Sample Architecture Writeup Two — Data Lakehouse</p>
+        <p class="arch-sub">End-to-end lakehouse design using Bronze/Silver/Gold medallion architecture on cloud storage with Delta Lake, Unity Catalog governance, and dbt transformation layer for analytics-ready Gold tables.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-icon">📄</div>
+      <div class="arch-body">
+        <p class="arch-title">Sample Architecture Writeup Three — SIEM Design</p>
+        <p class="arch-sub">Custom SPL correlation searches and alert rules for detecting lateral movement, privilege escalation, and data exfiltration. Includes MITRE ATT&amp;CK mapping and runbook templates for each detection rule.</p>
+      </div>
+      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ SECTION 4: CLOUD & INFRASTRUCTURE (project-card with diagram badge) ═══ -->
+  <p class="section-label">Cloud &amp; Infrastructure — project-card</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="card-top"><div class="card-icon c4">☁️</div><span class="diagram-badge">Diagram</span></div>
+      <p class="card-name">Sample Infrastructure Card One — EKS Cluster</p>
+      <p class="card-desc">Multi-tenant Kubernetes cluster with RBAC, namespace isolation, resource quotas, Karpenter autoscaling, and Datadog observability for production ML workloads.</p>
+      <div class="tag-row"><span class="tag">EKS</span><span class="tag">Helm</span><span class="tag">Terraform</span><span class="tag">Karpenter</span></div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top"><div class="card-icon c5">🔒</div><span class="diagram-badge">Diagram</span></div>
+      <p class="card-name">Sample Infrastructure Card Two — Secure Data Vault</p>
+      <p class="card-desc">Tokenization and encryption architecture for sensitive cardholder data with KMS envelope encryption, audit logging, and IAM-based access controls meeting PCI-DSS requirements.</p>
+      <div class="tag-row"><span class="tag">KMS</span><span class="tag">Secrets Manager</span><span class="tag">IAM</span></div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top"><div class="card-icon c3">🔁</div><span class="diagram-badge">Diagram</span></div>
+      <p class="card-name">Sample Infrastructure Card Three — CI/CD Architecture</p>
+      <p class="card-desc">End-to-end CI/CD pipeline architecture covering build, test, security scan, image push to ECR, and blue/green deployment to EKS with automated smoke tests and rollback triggers.</p>
+      <div class="tag-row"><span class="tag">GitHub Actions</span><span class="tag">ECR</span><span class="tag">EKS</span><span class="tag">Docker</span></div>
+    </div>
+
+  </div>
+
+</div>
+</main>
+
+<script src="footer.js"></script>
+</body>
+</html>

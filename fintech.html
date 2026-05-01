@@ -7,9 +7,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5QKVQ3EG20');
-  </script>  
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FinTech — Kalyan Rachapudi</title>
@@ -30,38 +29,81 @@
   <div class="domain-header">
     <p class="eyebrow">Industry · Domain</p>
     <h1 class="domain-title">FinTech</h1>
-    <p class="domain-desc">Data engineering and machine learning applied to financial services — fraud detection, risk modeling, real-time streaming pipelines, and regulatory reporting.</p>
+    <p class="domain-desc">Data engineering and machine learning applied to financial services — fraud detection, risk modeling, real-time streaming pipelines, and enterprise loan management systems.</p>
   </div>
 
   <hr class="divider" />
 
-  <p class="section-label">Live demos — Streamlit</p>
-  <div class="projects-grid">
+  <p class="section-label">Live Demos</p>
+  <div class="demo-cards-grid">
 
-    <a href="https://smartcreditriskloaneligibilityengine.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c2">💳</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Smart Credit Risk &amp; Loan Eligibility Engine</p>
-      <p class="card-desc">End-to-End FinTech pipeline: from raw banking data to AI-driven credit decisions.</p>
-      <div class="tag-row">
-        <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
+    <a href="https://smartcreditriskloaneligibilityengine.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">Smart Credit Risk &amp; Loan Eligibility Engine</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">End-to-end credit risk assessment pipeline using the HMEQ dataset, implementing a Medallion Architecture from raw CSV ingestion through feature engineering to a Random Forest classifier with real-time approve/reject decisions.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Implemented a Bronze/Silver/Gold Medallion Architecture — raw CSV ingestion, smart imputation (median-fill for debt ratios, zero-fill for credit events), and one-hot encoding for model compatibility.</li>
+          <li>Trained a Random Forest Classifier with stratified splitting and class weight balancing to handle a dataset with only 20% default rate.</li>
+          <li>Identified DELINQ (past delinquencies) and DEBTINC (Debt-to-Income ratio) as primary risk drivers via feature importance analysis.</li>
+          <li>Built a real-time eligibility checker allowing loan officers to input custom applicant data and receive a risk probability score with an automated Approve/Reject decision.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Random Forest</span><span class="tag">Streamlit</span>
+        </div>
       </div>
     </a>
 
-    <a href="https://stockmarketperformanceandforecastingengine.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c2">📈</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Stock Market Performance &amp; Forecasting Engine</p>
-      <p class="card-desc">AI-driven market sentinel for time-series analysis and predictive modeling.</p>
-      <div class="tag-row">
-        <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
+    <a href="https://stockmarketperformanceandforecastingengine.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">Stock Market Performance &amp; Forecasting Engine</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">Quantitative analysis dashboard that transforms live market streams into actionable insights using Meta's Prophet model for 30-day forward forecasting, technical indicators, and an automated backtesting framework.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Built a live API bridge to Yahoo Finance with UTC timezone normalization and MultiIndex flattening for reliable data ingestion.</li>
+          <li>Engineered a momentum layer calculating SMA and RSI technical indicators for trend and strength analysis.</li>
+          <li>Implemented 30-day forward forecasting using Meta's Prophet additive model with a 95% confidence interval uncertainty cloud.</li>
+          <li>Built an automated backtesting framework that hides the last 30 days of data to measure AI forecast precision against actual market results.</li>
+          <li>Designed a custom cascading reset system to ensure data consistency when switching between ticker symbols.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Prophet</span><span class="tag">yfinance</span><span class="tag">pandas-ta</span><span class="tag">Plotly</span><span class="tag">Streamlit</span>
+        </div>
       </div>
     </a>
 
-    <a href="https://real-timetransactionfrauddetectionsystem.streamlit.app/" target="_blank" class="project-card linked">
-      <div class="card-top"><div class="card-icon c2">🔍</div><span class="link-badge">Live Demo ↗</span></div>
-      <p class="card-name">Real Time Transaction Fraud Detection System</p>
-      <p class="card-desc">Unsupervised anomaly detection for high-velocity financial streams.</p>
-      <div class="tag-row">
-        <span class="tag">NumPy</span><span class="tag">Plotly</span><span class="tag">yFinance</span>
+    <a href="https://real-timetransactionfrauddetectionsystem.streamlit.app/" target="_blank" class="demo-detail-card">
+      <div class="demo-card-header">
+        <div class="demo-card-top">
+          <p class="demo-card-title">Real-Time Transaction Fraud Detection System</p>
+          <span class="demo-live-badge">Live Demo ↗</span>
+        </div>
+        <p class="demo-card-summary">Real-time fraud sentinel that monitors a simulated stream of credit card transactions using Isolation Forest unsupervised ML to flag suspicious behavior based on geographic and monetary variance — no labelled fraud data required.</p>
+      </div>
+      <div class="demo-card-body">
+        <ul>
+          <li>Implemented an Isolation Forest model calibrated at 3% contamination rate to identify outliers in a live transaction stream without pre-labelled historical fraud data.</li>
+          <li>Built a Python generator simulating a 1-second heartbeat of transaction metadata (amount, time, location) feeding a live-updating war room dashboard.</li>
+          <li>Used st.session_state for real-time data persistence, enabling stream pausing and resuming without data loss.</li>
+          <li>Implemented a human-in-the-loop forensics module for deep-dive investigation of flagged transactions and real-time at-risk capital calculation.</li>
+        </ul>
+      </div>
+      <div class="demo-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Isolation Forest</span><span class="tag">Plotly</span><span class="tag">Streamlit</span>
+        </div>
       </div>
     </a>
 
@@ -69,46 +111,178 @@
 
   <hr class="divider" />
 
-  <p class="section-label">Architecture &amp; writeups</p>
-  <div class="arch-list">
+  <p class="section-label">Projects</p>
 
-    <div class="arch-card">
-      <div class="arch-icon">⚡</div>
-      <div class="arch-body">
-        <p class="arch-title">Real-time Fraud Detection Pipeline</p>
-        <p class="arch-sub">Kafka + Flink streaming pipeline with sub-100ms latency scoring. Feature store backed by Redis, model served via SageMaker endpoint.</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Real-Time Healthcare Claims Streaming Platform</p>
+        <p class="proj-card-summary">Real-time financial data platform processing X12 claim data via Apache Kafka, medallion architecture on AWS, and NCQA/CMS-compliant metrics — reframed for FinTech regulatory reporting.</p>
       </div>
-      <a href="https://github.com/kcrachapudi/fraud-pipeline" target="_blank" class="github-badge">GitHub ↗</a>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built end-to-end Kafka streaming pipeline ingesting high-velocity financial transactions into AWS S3 and RDS PostgreSQL.</li>
+          <li>Implemented Bronze/Silver/Gold medallion architecture for scalable financial data processing and audit trails.</li>
+          <li>Developed Gold layer SQL models supporting regulatory metrics and CMS standards-equivalent financial reporting.</li>
+          <li>Processed claim data via Spark on Databricks for large-scale batch analytics alongside the streaming layer.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">Databricks</span><span class="tag">AWS S3</span><span class="tag">AWS RDS</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
     </div>
 
-    <div class="arch-card">
-      <div class="arch-icon">📄</div>
-      <div class="arch-body">
-        <p class="arch-title">Regulatory Reporting Automation (Basel III)</p>
-        <p class="arch-sub">dbt models transforming raw transaction data into Basel III capital adequacy reports with automated reconciliation checks.</p>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Healthcare ELT/ETL Financial Reporting Pipeline</p>
+        <p class="proj-card-summary">Enterprise-grade ELT pipeline integrating EDI financial data sources with cloud-scale GCP orchestration, dbt transformations, and regulatory-compliant reporting.</p>
       </div>
-      <a href="#" class="pdf-badge">PDF writeup ↗</a>
+      <div class="proj-card-body">
+        <ul>
+          <li>Developed a FastAPI ingestion engine with plugin-based parsing for ANSI X12 financial EDI formats (834/835/837) secured with HMAC-based APIs.</li>
+          <li>Engineered dbt transformation models for financial reconciliation, NPI normalization, and claims processing (837 vs 835 matching).</li>
+          <li>Orchestrated batch and real-time financial workflows using Apache Airflow with SFTP dispatch for remittance transactions.</li>
+          <li>Deployed scalable GCP infrastructure (BigQuery, Cloud Run, Pub/Sub) using Terraform with HIPAA-equivalent security controls.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">BigQuery</span><span class="tag">Cloud Run</span><span class="tag">Terraform</span><span class="tag">X12</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Analytics Dashboard</p>
+        <p class="proj-card-summary">Python/Django analytics dashboard for LoanIQ operational reporting, deployed on IIS and connected to SQL Server, enabling business stakeholders to query and visualize loan portfolio datasets.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a dynamic reporting interface allowing users to select report types and visualize operational loan datasets in real time.</li>
+          <li>Optimized complex SQL queries against SQL Server to improve reporting performance for business stakeholders.</li>
+          <li>Configured the Python/Django application on IIS using HTTPPlatformHandler with static file and routing handling.</li>
+          <li>Integrated SQL Server backend via pyodbc with parameterized queries for secure data access.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQL Server</span><span class="tag">IIS</span><span class="tag">pyodbc</span>
+        </div>
+      </div>
     </div>
 
   </div>
 
   <hr class="divider" />
 
-  <p class="section-label">Cloud &amp; infrastructure</p>
-  <div class="projects-grid">
+  <p class="section-label">BANK OF AMERICA · LOANIQ</p>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c4">☁️</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">Data Lakehouse on AWS</p>
-      <p class="card-desc">S3 + Glue + Redshift Spectrum lakehouse for financial transaction history with partitioned Parquet storage.</p>
-      <div class="tag-row"><span class="tag">S3</span><span class="tag">Glue</span><span class="tag">Redshift</span><span class="tag">Parquet</span></div>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Deployment BAU &amp; Validation</p>
+        <p class="proj-card-summary">End-to-end deployment validation and BAU operations for the LoanIQ enterprise loan management platform across multiple environments.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Executed deployment validation workflows — bringing database servers online, verifying replication health, and confirming stored procedure fixes were working as designed.</li>
+          <li>Ran IIS server health checks and heartbeats across web apps and web services post-deployment to confirm BAU status.</li>
+          <li>Managed NO-GO playbooks when deployments failed — reverting changes and restarting all servers and apps to restore BAU.</li>
+          <li>Coordinated greenlighting communications to development and operations teams on deployment outcomes.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">LoanIQ</span><span class="tag">IIS</span><span class="tag">SQL Server</span><span class="tag">DynaTrace</span><span class="tag">SoapUI</span><span class="tag">Postman</span>
+        </div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <div class="card-top"><div class="card-icon c5">🔒</div><span class="diagram-badge">Diagram</span></div>
-      <p class="card-name">PCI-DSS Compliant Data Vault</p>
-      <p class="card-desc">Tokenization and encryption architecture for cardholder data with audit logging and access controls.</p>
-      <div class="tag-row"><span class="tag">KMS</span><span class="tag">Secrets Manager</span><span class="tag">IAM</span></div>
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Autosys Jobs Cleanup &amp; Analyzer</p>
+        <p class="proj-card-summary">Designed and implemented a project to audit, synchronize, and clean up Autosys job configurations across all LoanIQ Lower Level Environments, and contributed to the Autosys Analyzer application for environment-wide job reporting.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Audited and corrected Autosys job configurations (server details, startup parameters, job locations) across DEV, TEST, LoadTest, and Pre-Production environments.</li>
+          <li>Synchronized Autosys jobs across LLEs against Production as the standard, resolving job count discrepancies and configuration drift.</li>
+          <li>Removed stale and unused Autosys jobs through careful cross-validation with development and operations teams.</li>
+          <li>Contributed to requirements gathering and triage for the Autosys Analyzer application used to generate environment-wide job reports and identify invalid parameters.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Autosys</span><span class="tag">LoanIQ</span><span class="tag">Broadcom</span><span class="tag">Windows</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Search Replace Application</p>
+        <p class="proj-card-summary">Developed a C# .NET utility for cross-server configuration string search and optional replacement, with CSV-based audit logging across the LoanIQ multi-server estate.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a C# .NET application to search configuration strings across multiple web app, web service, and application servers and log results in CSV format.</li>
+          <li>Implemented optional replace-string functionality enabling bulk configuration updates across server estates without manual file editing.</li>
+          <li>Designed for use during environment migrations and configuration validation — particularly useful when pointing apps to new SQL Server or middleware endpoints.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">C#</span><span class="tag">.NET</span><span class="tag">LoanIQ</span><span class="tag">Windows</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Database Table Import Scripts</p>
+        <p class="proj-card-summary">T-SQL automation scripts for chunk-based, transaction-safe table data imports between SQL Server databases within the LoanIQ environment estate.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built scripts that iterate through schema tables, detect identity columns, and construct dynamic column lists for safe data import.</li>
+          <li>Implemented chunk-based reading and transactional inserts from source to destination to prevent lock contention on large tables.</li>
+          <li>Used SSMS Import/Export tool and custom scripts to resolve data integrity discrepancies between LLEs, with pre and post data integrity validation.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">SQL Server</span><span class="tag">T-SQL</span><span class="tag">Stored Procedures</span><span class="tag">SSMS</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ IIS Web Apps &amp; Web Services Support</p>
+        <p class="proj-card-summary">Production and application support for LoanIQ's IIS-hosted web applications and web services, covering health monitoring, RCA, load balancing, and SQL Server backend troubleshooting.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Monitored IIS application pools, nodes, and web services using DynaTrace heartbeats and LTM health pings for proactive issue detection.</li>
+          <li>Performed root cause analysis (RCA) and resolution of App/API failures on IIS, SQL Server backend issues, and LTM load balancing problems.</li>
+          <li>Managed application pool maintenance windows — taking nodes down, applying fixes, testing, and bringing them back with zero-downtime coordination.</li>
+          <li>Validated web services and APIs using SoapUI and Postman across all environments.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">IIS</span><span class="tag">DynaTrace</span><span class="tag">SQL Server</span><span class="tag">LTM</span><span class="tag">SoapUI</span><span class="tag">Postman</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
     </div>
 
   </div>

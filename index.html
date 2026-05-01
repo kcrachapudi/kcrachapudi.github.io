@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QKVQ3EG20"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-5QKVQ3EG20');
   </script>
   <meta charset="UTF-8" />
@@ -17,6 +16,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 7-card grid: 3 top row, 4 bottom — or auto-fit for responsiveness */
+    .domains-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 860px) {
+      .domains-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .domains-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -41,10 +52,10 @@
 
   <!-- STATS -->
   <div class="stats-row">
-    <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Projects</div></div>
-    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Domains</div></div>
-    <div class="stat"><div class="stat-num">12+</div><div class="stat-label">Live Demos</div></div>
-    <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Cloud Deployments</div></div>
+    <div class="stat"><div class="stat-num">25+</div><div class="stat-label">Projects</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">Domains</div></div>
+    <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Live Demos</div></div>
+    <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Cloud Deployments</div></div>
   </div>
 
   <hr class="divider" />
@@ -62,43 +73,50 @@
       <a href="biomedtech.html" class="domain-card industry">
         <div class="dc-top"><div class="dc-icon c1">⚕️</div><span class="dc-type industry">Industry</span></div>
         <p class="dc-name">BioMedTech</p>
-        <p class="dc-meta">5 projects · 3 live demos</p>
-        <div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">FHIR</span><span class="dc-tag">XGBoost</span></div>
+        <p class="dc-meta">6 projects · 3 live demos</p>
+        <div class="dc-tags"><span class="dc-tag">Python</span><span class="dc-tag">FHIR</span><span class="dc-tag">HL7</span></div>
       </a>
 
       <a href="fintech.html" class="domain-card industry">
         <div class="dc-top"><div class="dc-icon c2">💹</div><span class="dc-type industry">Industry</span></div>
         <p class="dc-name">FinTech</p>
-        <p class="dc-meta">4 projects · 3 live demos</p>
-        <div class="dc-tags"><span class="dc-tag">Spark</span><span class="dc-tag">Kafka</span><span class="dc-tag">dbt</span></div>
+        <p class="dc-meta">8 projects · 3 live demos</p>
+        <div class="dc-tags"><span class="dc-tag">Kafka</span><span class="dc-tag">Spark</span><span class="dc-tag">LoanIQ</span></div>
       </a>
 
       <a href="data-analytics.html" class="domain-card industry">
         <div class="dc-top"><div class="dc-icon c3">📊</div><span class="dc-type industry">Industry</span></div>
         <p class="dc-name">Data Analytics</p>
-        <p class="dc-meta">6 projects · 4 live demos</p>
+        <p class="dc-meta">Coming soon</p>
         <div class="dc-tags"><span class="dc-tag">Tableau</span><span class="dc-tag">BigQuery</span><span class="dc-tag">dbt</span></div>
       </a>
 
       <a href="data-engineering.html" class="domain-card platform">
         <div class="dc-top"><div class="dc-icon c4">🔁</div><span class="dc-type platform">Platform</span></div>
         <p class="dc-name">Data Engineering</p>
-        <p class="dc-meta">5 projects · 1 live demo</p>
-        <div class="dc-tags"><span class="dc-tag">Airflow</span><span class="dc-tag">Glue</span><span class="dc-tag">Redshift</span></div>
+        <p class="dc-meta">5 projects</p>
+        <div class="dc-tags"><span class="dc-tag">Airflow</span><span class="dc-tag">Kafka</span><span class="dc-tag">dbt</span></div>
       </a>
 
       <a href="observability.html" class="domain-card platform">
         <div class="dc-top"><div class="dc-icon c5">👁️</div><span class="dc-type platform">Platform</span></div>
         <p class="dc-name">Observability &amp; SIEM</p>
-        <p class="dc-meta">4 projects · diagrams</p>
-        <div class="dc-tags"><span class="dc-tag">Splunk</span><span class="dc-tag">Datadog</span><span class="dc-tag">Grafana</span></div>
+        <p class="dc-meta">4 projects · 3 live demos</p>
+        <div class="dc-tags"><span class="dc-tag">Splunk</span><span class="dc-tag">AppDynamics</span><span class="dc-tag">DynaTrace</span></div>
       </a>
 
       <a href="devops.html" class="domain-card platform">
         <div class="dc-top"><div class="dc-icon c6">⚙️</div><span class="dc-type platform">Platform</span></div>
         <p class="dc-name">DevOps</p>
-        <p class="dc-meta">5 projects · diagrams</p>
+        <p class="dc-meta">5 projects</p>
         <div class="dc-tags"><span class="dc-tag">K8s</span><span class="dc-tag">Terraform</span><span class="dc-tag">CI/CD</span></div>
+      </a>
+
+      <a href="infrastructure.html" class="domain-card platform">
+        <div class="dc-top"><div class="dc-icon c4">🏗️</div><span class="dc-type platform">Platform</span></div>
+        <p class="dc-name">Infrastructure</p>
+        <p class="dc-meta">6 projects</p>
+        <div class="dc-tags"><span class="dc-tag">IIS</span><span class="dc-tag">SQL Server</span><span class="dc-tag">PowerShell</span></div>
       </a>
 
     </div>
@@ -126,10 +144,10 @@
       </div>
 
       <div class="hl-card">
-        <span class="hl-badge infra">Infrastructure</span>
-        <p class="hl-title">EKS Multi-tenant Cluster</p>
-        <p class="hl-desc">Production-grade Kubernetes setup with RBAC, Helm charts, and Datadog observability.</p>
-        <p class="hl-domain">DevOps · Observability</p>
+        <span class="hl-badge live">Live demo</span>
+        <p class="hl-title">LogSentinel — Log Anomaly Detector</p>
+        <p class="hl-desc">Isolation Forest ML model detecting anomalies across a synthetic microservice log stream in real time.</p>
+        <p class="hl-domain">Observability & SIEM</p>
       </div>
 
     </div>
@@ -144,13 +162,15 @@
       <span class="tool-pill">Python</span><span class="tool-pill">SQL</span>
       <span class="tool-pill">Spark</span><span class="tool-pill">Kafka</span>
       <span class="tool-pill">Airflow</span><span class="tool-pill">dbt</span>
-      <span class="tool-pill">AWS</span><span class="tool-pill">Kubernetes</span>
-      <span class="tool-pill">Terraform</span><span class="tool-pill">Docker</span>
-      <span class="tool-pill">Splunk</span><span class="tool-pill">Datadog</span>
-      <span class="tool-pill">Grafana</span><span class="tool-pill">ELK Stack</span>
-      <span class="tool-pill">Streamlit</span><span class="tool-pill">XGBoost</span>
-      <span class="tool-pill">Scikit-learn</span><span class="tool-pill">GitHub Actions</span>
-      <span class="tool-pill">Redshift</span><span class="tool-pill">BigQuery</span>
+      <span class="tool-pill">AWS</span><span class="tool-pill">GCP</span>
+      <span class="tool-pill">Kubernetes</span><span class="tool-pill">Docker</span>
+      <span class="tool-pill">Terraform</span><span class="tool-pill">GitHub Actions</span>
+      <span class="tool-pill">Splunk</span><span class="tool-pill">AppDynamics</span>
+      <span class="tool-pill">DynaTrace</span><span class="tool-pill">Grafana</span>
+      <span class="tool-pill">Streamlit</span><span class="tool-pill">FastAPI</span>
+      <span class="tool-pill">Scikit-learn</span><span class="tool-pill">IIS</span>
+      <span class="tool-pill">SQL Server</span><span class="tool-pill">PowerShell</span>
+      <span class="tool-pill">FHIR</span><span class="tool-pill">HL7</span>
     </div>
   </section>
 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QKVQ3EG20"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5QKVQ3EG20');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infrastructure — Kalyan Rachapudi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Technical · Platform</p>
+    <h1 class="domain-title">Infrastructure</h1>
+    <p class="domain-desc">Enterprise systems provisioning, server administration, database infrastructure, and platform operations — supporting mission-critical environments across Windows, Linux, IIS, and SQL Server.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <p class="section-label">Projects</p>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Self-Hosted Kubernetes Cluster — Bare Metal Provisioning</p>
+        <p class="proj-card-summary">End-to-end provisioning of a production-style 3-node Kubernetes cluster on bare-metal Ubuntu VMs, including networking, CNI setup, and cluster validation.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Provisioned and configured a 3-node Kubernetes cluster (1 control plane, 2 workers) using kubeadm on Ubuntu virtual machines.</li>
+          <li>Installed and configured Flannel CNI for pod networking and resolved real-world networking and cluster configuration issues.</li>
+          <li>Validated cluster health through workload deployment, HPA scaling tests, and node failure recovery scenarios.</li>
+          <li>Deployed Prometheus and Grafana for infrastructure-level monitoring of node and pod resources.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span class="tag">Flannel</span><span class="tag">Ubuntu</span><span class="tag">Linux</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">AWS Cloud Infrastructure Provisioning (Terraform + EKS)</p>
+        <p class="proj-card-summary">Terraform-provisioned AWS infrastructure including EKS cluster, networking, IAM, and ECR for a cloud-native containerized application platform.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Provisioned Amazon EKS cluster, VPC networking, subnets, security groups, and IAM roles using Terraform for repeatable infrastructure-as-code deployments.</li>
+          <li>Configured Amazon ECR for Docker image storage with lifecycle policies and IAM-based access controls.</li>
+          <li>Managed AWS CLI authentication and credential configuration for CI/CD pipeline integration via GitHub Actions.</li>
+          <li>Resolved real-world AWS infrastructure issues including IAM permission boundaries, EKS node group scaling, and networking connectivity.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Terraform</span><span class="tag">AWS EKS</span><span class="tag">AWS ECR</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">AWS CLI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">GCP Infrastructure Provisioning (Terraform + Cloud Run)</p>
+        <p class="proj-card-summary">Terraform-managed GCP infrastructure for a healthcare data platform including Cloud Run, BigQuery, Pub/Sub, IAM, and Secret Manager with HIPAA-equivalent security controls.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Provisioned Cloud Run services, BigQuery datasets, Pub/Sub topics, and IAM bindings using Terraform for a fully reproducible infrastructure stack.</li>
+          <li>Configured Secret Manager for secure credential storage and IAM service account roles for least-privilege access across pipeline components.</li>
+          <li>Managed environment separation (dev/staging/prod) with distinct Terraform workspaces and variable configurations.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Terraform</span><span class="tag">GCP</span><span class="tag">Cloud Run</span><span class="tag">BigQuery</span><span class="tag">Pub/Sub</span><span class="tag">IAM</span><span class="tag">Secret Manager</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <p class="section-label">BANK OF AMERICA · LOANIQ</p>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Systems &amp; Infrastructure Provisioning and Support</p>
+        <p class="proj-card-summary">End-to-end provisioning and ongoing support of Windows and Linux server environments across the LoanIQ enterprise platform — including OS setup, application installation, Active Directory, and virtualization.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Provisioned and configured Windows Server environments — OS installation, role setup, system hardening, and Windows updates across DEV, TEST, LoadTest, and Pre-Production.</li>
+          <li>Managed Active Directory — user provisioning, group policy objects (GPOs), permissions, and security group management.</li>
+          <li>Worked with virtualization platforms (VMware/Hyper-V) to provision and manage virtual servers across the environment estate.</li>
+          <li>Supported production systems by resolving incidents and service requests within SLA timelines using Jira and BMC ITSM for tracking.</li>
+          <li>Automated administrative and support tasks using PowerShell and Python scripts to reduce manual toil.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">VMware</span><span class="tag">Hyper-V</span><span class="tag">PowerShell</span><span class="tag">Jira</span><span class="tag">BMC ITSM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ SQL Server Infrastructure Support</p>
+        <p class="proj-card-summary">Database infrastructure support for LoanIQ SQL Server environments — covering connectivity troubleshooting, blocking analysis, replication monitoring, and cross-environment data synchronization.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Monitored and resolved SQL Server connectivity issues using SSMS, sp_who2, sys.dm_exec_requests, and Performance Monitor (PerfMon) for disk I/O, CPU, and memory analysis.</li>
+          <li>Monitored SQL Server replication to maintain data integrity across LLEs — taking servers down for maintenance and bringing them back with full integrity validation.</li>
+          <li>Resolved data discrepancies between environments using SSMS Import/Export with pre and post data integrity checks.</li>
+          <li>Checked and fixed stored procedure logic, network connectivity issues, and resolved blocking chains impacting application performance.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">SQL Server</span><span class="tag">SSMS</span><span class="tag">T-SQL</span><span class="tag">Replication</span><span class="tag">PerfMon</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ IBM Sterling Connect:Direct File Transmissions</p>
+        <p class="proj-card-summary">End-to-end configuration and management of IBM Connect:Direct file transfers across z/OS, Linux, and Windows environments for LoanIQ cross-platform file movement.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Coordinated SNODE/PNODE configuration, IP/port setup, TLS security parameters, and transfer profiles with cross-team coordination across mainframe and distributed teams.</li>
+          <li>Managed cross-platform file movement with EBCDIC/ASCII translation, binary/text mode selection, and path resolution across z/OS, Linux, and Windows.</li>
+          <li>Implemented reliable transfer features including scheduling, checkpoint/restart for large file recovery, and DCB dataset configuration for z/OS targets.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">IBM Connect:Direct</span><span class="tag">z/OS</span><span class="tag">Linux</span><span class="tag">Windows</span><span class="tag">MFT</span><span class="tag">TLS</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Technology Infrastructure Operations</p>
+        <p class="proj-card-summary">Ongoing infrastructure operations and environment management for the LoanIQ platform across DEV, TEST, LoadTest, and Pre-Production — ensuring consistency, stability, and parity with Production.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Maintained and supported enterprise LoanIQ environments across all lower level environments (LLEs) — performing environment comparison and configuration validation against Production.</li>
+          <li>Triaged production issues across web services, APIs, databases, and infrastructure layers — collaborating with development teams to diagnose failures and resolve configuration discrepancies.</li>
+          <li>Performed patching, upgrades, and system validation across environments with coordinated maintenance windows.</li>
+          <li>Supported .NET, Java, and MuleSoft application teams during debugging and environment issue resolution.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">LoanIQ</span><span class="tag">IIS</span><span class="tag">Windows Server</span><span class="tag">.NET</span><span class="tag">MuleSoft</span><span class="tag">Oracle</span><span class="tag">SQL Server</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Infrastructure &amp; Applications Automation</p>
+        <p class="proj-card-summary">Comprehensive PowerShell and Python automation for deployment, monitoring, and reliability across the LoanIQ Windows, IIS, and SQL Server infrastructure estate.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Automated IIS .NET application deployments with controlled restarts, pre/post health checks, structured logging, and failure recovery routines.</li>
+          <li>Built SQL Server automation for scheduled backups, restores, connectivity validation, and Python-based performance diagnostics.</li>
+          <li>Engineered auto-healing for IIS application pools and Windows services — conditional restarts with failure alerting and audit logging.</li>
+          <li>Created log management automation (cleanup, retention, analysis) to prevent disk saturation and maintain server performance.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">PowerShell</span><span class="tag">Python</span><span class="tag">IIS</span><span class="tag">SQL Server</span><span class="tag">Windows</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</main>
+
+<script src="footer.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@
     { href: "data-engineering.html", label: "Data Engineering" },
     { href: "observability.html",    label: "Observability & SIEM" },
     { href: "devops.html",           label: "DevOps" },
+    { href: "infrastructure.html",   label: "Infrastructure" },
   ];
 
   const current = window.location.pathname.split("/").pop() || "index.html";

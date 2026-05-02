@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QKVQ3EG20"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5QKVQ3EG20');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education & Certifications — Kalyan Rachapudi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Cert Cards Grid ── */
+    .cert-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 2rem;
+    }
+
+    .cert-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-top: 2.5px solid var(--accent-mid);
+      border-radius: var(--radius-lg);
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+      color: inherit;
+    }
+    .cert-card:hover {
+      border-color: var(--accent-mid);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .cert-card.linked { cursor: pointer; }
+
+    .cert-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .cert-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .cert-link-badge {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #e0f8f8;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .cert-card:hover .cert-link-badge {
+      background: #0a8080;
+    }
+
+    .cert-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+    .cert-issuer {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+    }
+    .cert-date {
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+
+    /* ── Education Cards ── */
+    .edu-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 2rem;
+    }
+
+    .edu-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-top: 2.5px solid var(--ind-border);
+      border-radius: var(--radius-lg);
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .edu-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .edu-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .edu-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .edu-degree {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 2px;
+    }
+    .edu-school {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .edu-meta {
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+    .edu-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 680px) {
+      .cert-cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .edu-cards-grid  { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 420px) {
+      .cert-cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Background</p>
+    <h1 class="domain-title">Education &amp; Certifications</h1>
+    <p class="domain-desc">Academic background and industry certifications across cloud, data, and healthcare technology domains.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <p class="section-label">Education</p>
+  <div class="edu-cards-grid">
+
+    <div class="edu-card">
+      <div class="edu-card-top">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <p class="edu-degree">Masters - Computer Science</p>
+          <p class="edu-school">Osmania University</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-card-top">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <p class="edu-degree">Bachelor's of Science — Science</p>
+          <p class="edu-school">Osmania University</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+  <!--
+  <p class="section-label">Certifications - Coming Soon</p>
+  <div class="cert-cards-grid">
+
+    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
+      <div class="cert-card-top">
+        <span class="cert-icon">☁️</span>
+        <span class="cert-link-badge">Verify ↗</span>
+      </div>
+      <p class="cert-name">AWS Certified Solutions Architect</p>
+      <p class="cert-issuer">Amazon Web Services</p>
+      <p class="cert-date">Issued: Month 20XX</p>
+    </a>
+
+    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
+      <div class="cert-card-top">
+        <span class="cert-icon">☁️</span>
+        <span class="cert-link-badge">Verify ↗</span>
+      </div>
+      <p class="cert-name">AWS Certified Data Engineer</p>
+      <p class="cert-issuer">Amazon Web Services</p>
+      <p class="cert-date">Issued: Month 20XX</p>
+    </a>
+
+    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
+      <div class="cert-card-top">
+        <span class="cert-icon">🐳</span>
+        <span class="cert-link-badge">Verify ↗</span>
+      </div>
+      <p class="cert-name">Certified Kubernetes Administrator</p>
+      <p class="cert-issuer">Cloud Native Computing Foundation</p>
+      <p class="cert-date">Issued: Month 20XX</p>
+    </a>
+
+    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
+      <div class="cert-card-top">
+        <span class="cert-icon">🔵</span>
+        <span class="cert-link-badge">Verify ↗</span>
+      </div>
+      <p class="cert-name">Microsoft Azure Fundamentals</p>
+      <p class="cert-issuer">Microsoft</p>
+      <p class="cert-date">Issued: Month 20XX</p>
+    </a>
+
+    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
+      <div class="cert-card-top">
+        <span class="cert-icon">📊</span>
+        <span class="cert-link-badge">Verify ↗</span>
+      </div>
+      <p class="cert-name">Your Certification Name</p>
+      <p class="cert-issuer">Issuing Organization</p>
+      <p class="cert-date">Issued: Month 20XX</p>
+    </a>
+
+    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
+      <div class="cert-card-top">
+        <span class="cert-icon">🏥</span>
+        <span class="cert-link-badge">Verify ↗</span>
+      </div>
+      <p class="cert-name">Your Certification Name</p>
+      <p class="cert-issuer">Issuing Organization</p>
+      <p class="cert-date">Issued: Month 20XX</p>
+    </a>
+
+  </div>
+  -->
+</div>
+</main>
+
+<script src="footer.js"></script>
+</body>
+</html>

@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* 7-card grid: 3 top row, 4 bottom — or auto-fit for responsiveness */
     .domains-grid {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -26,6 +25,14 @@
     }
     @media (max-width: 480px) {
       .domains-grid { grid-template-columns: 1fr; }
+    }
+
+    .hero-name-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
     }
   </style>
 </head>
@@ -39,7 +46,10 @@
   <!-- HERO -->
   <section class="hero">
     <p class="eyebrow">Portfolio · Project Showcase</p>
-    <h1 class="hero-name">Kalyan Rachapudi</h1>
+    <div class="hero-name-row">
+      <h1 class="hero-name" style="margin-bottom:0;">Kalyan Rachapudi</h1>
+      <a href="education.html" class="btn btn-primary" style="font-size:11px; padding:7px 16px; margin-bottom: 0px;">Education &amp; Certifications ↗</a>
+    </div>
     <p class="hero-sub">Software Engineer, Data Engineer and Infrastructure Engineer</p>
     <p class="hero-sub">Data Analytics, Observability & SIEM, DevOps</p>
     <p class="hero-sub">Technical Support, Application Support, Production Support</p>

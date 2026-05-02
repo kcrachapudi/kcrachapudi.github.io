@@ -1,6 +1,5 @@
 // nav.js — single source of truth for site navigation
 // To add/rename a page or update your name, edit ONLY this file.
-
 (function () {
   const links = [
     { href: "index.html",            label: "Home" },
@@ -23,10 +22,15 @@
     })
     .join("");
 
+  const eduActive = current === "education.html" ? ' nav-edu-active' : '';
+
   const html = `
     <nav>
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Kalyan Rachapudi</a>
+        <div class="nav-left">
+          <a href="index.html" class="nav-logo">Kalyan Rachapudi</a>
+          <a href="education.html" class="nav-edu${eduActive}">Education &amp; Certifications</a>
+        </div>
         <div class="nav-links">${navLinks}</div>
       </div>
     </nav>`;

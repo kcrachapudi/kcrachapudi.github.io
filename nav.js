@@ -29,7 +29,6 @@
       <div class="nav-inner">
         <div class="nav-left">
           <a href="index.html" class="nav-logo">Kalyan Rachapudi</a>
-          <a href="education.html" class="nav-edu${eduActive}">Education &amp; Certifications</a>
         </div>
         <div class="nav-links">${navLinks}</div>
       </div>

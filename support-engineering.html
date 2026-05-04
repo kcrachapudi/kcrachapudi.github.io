@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QKVQ3EG20"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5QKVQ3EG20');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Engineering — Kalyan Rachapudi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<main class="page">
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <div class="domain-header">
+    <p class="eyebrow">Platform · Domain</p>
+    <h1 class="domain-title">Support Engineering</h1>
+    <p class="domain-desc">Diagnosing, stabilizing, and resolving complex issues across web applications, APIs, and databases — bridging engineering depth with operational urgency to keep systems running and users unblocked.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <p class="section-label">Bank of America · LoanIQ</p>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Deployment BAU &amp; Validation</p>
+        <p class="proj-card-summary">End-to-end deployment validation and BAU operations for the LoanIQ enterprise loan management platform across multiple environments.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Executed deployment validation workflows — bringing database servers online, verifying replication health, and confirming stored procedure fixes were working as designed.</li>
+          <li>Ran IIS server health checks and heartbeats across web apps and web services post-deployment to confirm BAU status.</li>
+          <li>Managed NO-GO playbooks when deployments failed — reverting changes and restarting all servers and apps to restore BAU.</li>
+          <li>Coordinated greenlighting communications to development and operations teams on deployment outcomes.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">LoanIQ</span><span class="tag">IIS</span><span class="tag">SQL Server</span><span class="tag">DynaTrace</span><span class="tag">SoapUI</span><span class="tag">Postman</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Autosys Jobs Cleanup &amp; Analyzer</p>
+        <p class="proj-card-summary">Audited, synchronized, and cleaned up Autosys job configurations across all LoanIQ Lower Level Environments, and contributed to the Autosys Analyzer application for environment-wide job reporting.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Audited and corrected Autosys job configurations (server details, startup parameters, job locations) across DEV, TEST, LoadTest, and Pre-Production environments.</li>
+          <li>Synchronized Autosys jobs across LLEs against Production as the standard, resolving job count discrepancies and configuration drift.</li>
+          <li>Removed stale and unused Autosys jobs through careful cross-validation with development and operations teams.</li>
+          <li>Contributed to requirements gathering and triage for the Autosys Analyzer application used to generate environment-wide job reports and identify invalid parameters.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Autosys</span><span class="tag">LoanIQ</span><span class="tag">Broadcom</span><span class="tag">Windows</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Search Replace Application</p>
+        <p class="proj-card-summary">C# .NET utility for cross-server configuration string search and optional replacement, with CSV-based audit logging across the LoanIQ multi-server estate.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a C# .NET application to search configuration strings across multiple web app, web service, and application servers and log results in CSV format.</li>
+          <li>Implemented optional replace-string functionality enabling bulk configuration updates across server estates without manual file editing.</li>
+          <li>Designed for use during environment migrations and configuration validation — particularly useful when pointing apps to new SQL Server or middleware endpoints.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">C#</span><span class="tag">.NET</span><span class="tag">LoanIQ</span><span class="tag">Windows</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Database Table Import Scripts</p>
+        <p class="proj-card-summary">T-SQL automation scripts for chunk-based, transaction-safe table data imports between SQL Server databases within the LoanIQ environment estate.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built scripts that iterate through schema tables, detect identity columns, and construct dynamic column lists for safe data import.</li>
+          <li>Implemented chunk-based reading and transactional inserts from source to destination to prevent lock contention on large tables.</li>
+          <li>Used SSMS Import/Export tool and custom scripts to resolve data integrity discrepancies between LLEs, with pre and post data integrity validation.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">SQL Server</span><span class="tag">T-SQL</span><span class="tag">Stored Procedures</span><span class="tag">SSMS</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ IIS Web Apps &amp; Web Services Support</p>
+        <p class="proj-card-summary">Production and application support for LoanIQ's IIS-hosted web applications and web services, covering health monitoring, RCA, load balancing, and SQL Server backend troubleshooting.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Monitored IIS application pools, nodes, and web services using DynaTrace heartbeats and LTM health pings for proactive issue detection.</li>
+          <li>Performed root cause analysis (RCA) and resolution of App/API failures on IIS, SQL Server backend issues, and LTM load balancing problems.</li>
+          <li>Managed application pool maintenance windows — taking nodes down, applying fixes, testing, and bringing them back with zero-downtime coordination.</li>
+          <li>Validated web services and APIs using SoapUI and Postman across all environments.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">IIS</span><span class="tag">DynaTrace</span><span class="tag">SQL Server</span><span class="tag">LTM</span><span class="tag">SoapUI</span><span class="tag">Postman</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">LoanIQ Analytics Dashboard</p>
+        <p class="proj-card-summary">Python/Django analytics dashboard for LoanIQ operational reporting, deployed on IIS and connected to SQL Server, enabling business stakeholders to query and visualize loan portfolio datasets.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Built a dynamic reporting interface allowing users to select report types and visualize operational loan datasets in real time.</li>
+          <li>Optimized complex SQL queries against SQL Server to improve reporting performance for business stakeholders.</li>
+          <li>Configured the Python/Django application on IIS using HTTPPlatformHandler with static file and routing handling.</li>
+          <li>Integrated SQL Server backend via pyodbc with parameterized queries for secure data access.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQL Server</span><span class="tag">IIS</span><span class="tag">pyodbc</span><span class="tag">LoanIQ</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <p class="section-label">Technical Support Engineering</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">ASP.NET Web Application — End-to-End Troubleshooting</p>
+        <p class="proj-card-summary">Diagnosed and resolved complex issues across ASP.NET web applications and Web APIs in multi-tier enterprise environments.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Investigated and resolved HTTP 500 errors, authentication failures, and session management issues across ASP.NET MVC and Web API services.</li>
+          <li>Analyzed IIS logs, Event Viewer entries, and application trace logs to identify root causes of intermittent failures.</li>
+          <li>Resolved SQL Server connectivity issues including connection pool exhaustion, deadlocks, and slow query performance impacting application stability.</li>
+          <li>Collaborated with development teams to reproduce issues in staging, isolate code-level bugs, and validate hotfix deployments.</li>
+          <li>Documented resolution steps and created runbooks for recurring issue patterns to reduce future resolution time.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">ASP.NET</span><span class="tag">IIS</span><span class="tag">SQL Server</span><span class="tag">C#</span><span class="tag">Event Viewer</span><span class="tag">Windows Server</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Python Web App &amp; API Support — Django, Flask, FastAPI</p>
+        <p class="proj-card-summary">Provided technical support for Python-based web applications and REST APIs across Django, Flask, and FastAPI stacks in production environments.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Diagnosed Django ORM errors, migration failures, and admin panel issues for applications backed by PostgreSQL and MySQL.</li>
+          <li>Resolved Flask application startup failures, routing conflicts, and Gunicorn/uWSGI configuration issues in Linux deployments.</li>
+          <li>Troubleshot FastAPI endpoint errors, Pydantic validation failures, and async/await issues in high-throughput API services.</li>
+          <li>Analyzed Python stack traces, identified dependency conflicts, and resolved environment issues across virtualenv and Docker deployments.</li>
+          <li>Worked with DBAs to resolve slow queries, missing indexes, and ORM-generated inefficient SQL impacting API response times.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">Flask</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Docker</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Database Support — Oracle, SQL Server, PostgreSQL, RDS</p>
+        <p class="proj-card-summary">Provided database-level technical support across Oracle, SQL Server, PostgreSQL, and AWS RDS for enterprise applications and cloud-hosted services.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Diagnosed and resolved connection failures, timeout issues, and credential misconfigurations across Oracle and SQL Server environments.</li>
+          <li>Investigated slow query performance using execution plans, identified missing indexes, and coordinated with teams for query optimization.</li>
+          <li>Supported AWS RDS instances including parameter group changes, storage scaling, and snapshot restore operations for production incidents.</li>
+          <li>Resolved PostgreSQL replication lag, vacuum bloat, and lock contention issues affecting application availability.</li>
+          <li>Assisted developers with stored procedure debugging, trigger failures, and data integrity issues across multi-database environments.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Oracle</span><span class="tag">SQL Server</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">AWS RDS</span><span class="tag">SQL</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <p class="section-label">Application Support Engineering</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Streamlit &amp; Flask App Support — Data &amp; Analytics Platforms</p>
+        <p class="proj-card-summary">Supported internal Streamlit and Flask-based data applications used by analysts and operations teams, ensuring uptime, data accuracy, and user access.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Investigated Streamlit app crashes, widget state issues, and data rendering failures caused by upstream data pipeline changes.</li>
+          <li>Resolved user access and authentication issues across apps integrated with LDAP, OAuth, and environment-based secrets.</li>
+          <li>Managed app configuration updates, dependency upgrades, and redeployments on Linux servers and cloud platforms.</li>
+          <li>Coordinated with data engineering teams when broken pipelines caused stale or missing data in dashboards and reports.</li>
+          <li>Maintained app health monitoring, set up alerting for crashes, and documented known issues and workarounds for L1 support teams.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Flask</span><span class="tag">Linux</span><span class="tag">OAuth</span><span class="tag">Pandas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">ASP.NET &amp; Web API Application Support</p>
+        <p class="proj-card-summary">Supported .NET-based enterprise applications and REST APIs across development, staging, and production environments for business-critical workflows.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Managed incident tickets for ASP.NET applications including form submission failures, API timeouts, and broken integrations with downstream services.</li>
+          <li>Monitored application health using IIS request logs, Windows Event Viewer, and APM tools to proactively identify degradation.</li>
+          <li>Coordinated hotfix deployments with development teams, validated fixes in staging, and managed production release windows.</li>
+          <li>Supported application configuration changes including connection strings, feature flags, and environment-specific settings across web.config and appsettings.json.</li>
+          <li>Maintained application support documentation, escalation paths, and SLA tracking for business stakeholders.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">ASP.NET</span><span class="tag">C#</span><span class="tag">IIS</span><span class="tag">REST APIs</span><span class="tag">SQL Server</span><span class="tag">PowerShell</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Mulesoft Java API — Application Support Project</p>
+        <p class="proj-card-summary">Supported Mulesoft Java-based APIs and integration flows across development, staging, and production environments.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Supported Mulesoft Java-based APIs and integration flows across development, staging, and production environments.</li>
+          <li>Resolved issues related to API performance, integration failures, and configuration errors.</li>
+          <li>Utilized monitoring tools and logs to identify and troubleshoot problems in real-time.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Mulesoft</span><span class="tag">Java</span><span class="tag">APIs</span><span class="tag">Integration</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <p class="section-label">Production Support Engineering</p>
+  <div class="proj-cards-grid">
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Production Incident Response &amp; RCA</p>
+        <p class="proj-card-summary">Led and participated in production incident response across web applications, APIs, and database tiers — from triage to root cause analysis and post-mortem documentation.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Triaged P1/P2 production incidents across ASP.NET, Python, and database layers, coordinating with on-call engineering and business stakeholders.</li>
+          <li>Performed root cause analysis using application logs, APM traces, database slow query logs, and infrastructure metrics.</li>
+          <li>Executed rollback procedures, applied emergency configuration changes, and coordinated hotfix deployments under SLA pressure.</li>
+          <li>Authored post-mortem reports documenting timeline, root cause, impact, and corrective actions to prevent recurrence.</li>
+          <li>Built and maintained runbooks for common production failure patterns, reducing mean time to resolution across the team.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Incident Management</span><span class="tag">RCA</span><span class="tag">PagerDuty</span><span class="tag">Splunk</span><span class="tag">APM</span><span class="tag">Runbooks</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Production Monitoring &amp; Alerting Setup</p>
+        <p class="proj-card-summary">Designed and implemented monitoring and alerting coverage for production web applications and APIs to enable proactive detection of degradation before user impact.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Configured application performance monitoring for ASP.NET and Python services tracking response times, error rates, and throughput.</li>
+          <li>Set up log-based alerting in Splunk and CloudWatch for error spikes, database connection failures, and API latency thresholds.</li>
+          <li>Built Grafana dashboards aggregating application, database, and infrastructure metrics for production visibility.</li>
+          <li>Defined SLI/SLO targets for critical services and configured alert routing to on-call teams via PagerDuty.</li>
+          <li>Reduced alert noise by tuning thresholds, suppressing known maintenance windows, and consolidating redundant alerts.</li>
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">Splunk</span><span class="tag">Grafana</span><span class="tag">CloudWatch</span><span class="tag">PagerDuty</span><span class="tag">SLI/SLO</span><span class="tag">APM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-detail-card">
+      <div class="proj-card-header">
+        <p class="proj-card-title">Post Deployments — Production Support Project</p>
+        <p class="proj-card-summary">Supported post-deployment activities for production systems, ensuring smooth transitions and addressing any issues that arise.</p>
+      </div>
+      <div class="proj-card-body">
+        <ul>
+          <li>Validate APIs and Integrations — Validate APIs using Postman, Insomnia and SoapUI.</li>
+          <li>Validate Database Connections — Ensure database connections are stable and performant.</li>
+          <li>Validate .NET Web APPs, IIS Load Balancing, Memory Usage and Disk Usage post deployment</li>
+          <li>Check overall health and performance metrics for all applications to ensure BAU</li>  
+        </ul>
+      </div>
+      <div class="proj-card-footer">
+        <div class="tag-row">
+          <span class="tag">TBD</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</main>
+
+<script src="footer.js"></script>
+</body>
+</html>

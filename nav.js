@@ -2,14 +2,15 @@
 // To add/rename a page or update your name, edit ONLY this file.
 (function () {
   const links = [
-    { href: "index.html",            label: "Home" },
-    { href: "biomedtech.html",       label: "BioMedTech" },
-    { href: "fintech.html",          label: "FinTech" },
-    { href: "data-analytics.html",   label: "Data Analytics" },
-    { href: "data-engineering.html", label: "Data Engineering" },
-    { href: "observability.html",    label: "Observability & SIEM" },
-    { href: "devops.html",           label: "DevOps" },
-    { href: "infrastructure.html",   label: "Infrastructure" },
+    { href: "index.html",                label: "Home" },
+    { href: "support-engineering.html",  label: "Support Engineering" },
+    { href: "biomedtech.html",           label: "BioMedTech" },
+    { href: "fintech.html",              label: "FinTech" },
+    { href: "data-analytics.html",       label: "Data Analytics" },
+    { href: "data-engineering.html",     label: "Data Engineering" },
+    { href: "observability.html",        label: "Observability & SIEM" },
+    { href: "devops.html",               label: "DevOps" },
+    { href: "infrastructure.html",       label: "Infrastructure" },
   ];
 
   const current = window.location.pathname.split("/").pop() || "index.html";
@@ -22,14 +23,9 @@
     })
     .join("");
 
-  const eduActive = current === "education.html" ? ' nav-edu-active' : '';
-
   const html = `
     <nav>
       <div class="nav-inner">
-        <div class="nav-left">
-          <a href="index.html" class="nav-logo">Kalyan Rachapudi</a>
-        </div>
         <div class="nav-links">${navLinks}</div>
       </div>
     </nav>`;

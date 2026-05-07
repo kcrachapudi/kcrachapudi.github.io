@@ -18,133 +18,15 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ── Cert Cards Grid ── */
-    .cert-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 2rem;
-    }
-
-    .cert-card {
-      background: var(--bg-card);
-      border: 0.5px solid var(--border);
-      border-top: 2.5px solid var(--accent-mid);
-      border-radius: var(--radius-lg);
-      padding: 1rem 1.15rem;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
-      color: inherit;
-    }
-    .cert-card:hover {
-      border-color: var(--accent-mid);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    .cert-card.linked { cursor: pointer; }
-
-    .cert-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .cert-icon {
-      font-size: 22px;
-      flex-shrink: 0;
-    }
-    .cert-link-badge {
-      font-size: 10px;
-      font-weight: 500;
-      padding: 3px 9px;
-      border-radius: 10px;
-      background: var(--accent);
-      color: #e0f8f8;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .cert-card:hover .cert-link-badge {
-      background: #0a8080;
-    }
-
-    .cert-name {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.35;
-    }
-    .cert-issuer {
-      font-size: 11.5px;
-      color: var(--text-secondary);
-    }
-    .cert-date {
+    .certlet-group { margin-bottom: 1.5rem; }
+    .certlet-group-label {
       font-size: 11px;
-      color: var(--text-faint);
-    }
-
-    /* ── Education Cards ── */
-    .edu-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 2rem;
-    }
-
-    .edu-card {
-      background: var(--bg-card);
-      border: 0.5px solid var(--border);
-      border-top: 2.5px solid var(--ind-border);
-      border-radius: var(--radius-lg);
-      padding: 1rem 1.15rem;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
-    }
-    .edu-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .edu-card-top {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .edu-icon {
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-    .edu-degree {
-      font-size: 13px;
       font-weight: 500;
-      color: var(--text-primary);
-      line-height: 1.35;
-      margin-bottom: 2px;
-    }
-    .edu-school {
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-    .edu-meta {
-      font-size: 11px;
-      color: var(--text-faint);
-    }
-    .edu-desc {
-      font-size: 12px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    @media (max-width: 680px) {
-      .cert-cards-grid { grid-template-columns: repeat(2, 1fr); }
-      .edu-cards-grid  { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 420px) {
-      .cert-cards-grid { grid-template-columns: 1fr; }
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #7c3aed;
+      margin-bottom: 0.6rem;
+      padding-left: 2px;
     }
   </style>
 </head>
@@ -172,7 +54,7 @@
       <div class="edu-card-top">
         <div class="edu-icon">🎓</div>
         <div>
-          <p class="edu-degree">Masters - Computer Science</p>
+          <p class="edu-degree">Masters — Computer Science</p>
           <p class="edu-school">Osmania University</p>
         </div>
       </div>
@@ -182,7 +64,7 @@
       <div class="edu-card-top">
         <div class="edu-icon">🎓</div>
         <div>
-          <p class="edu-degree">Bachelor's of Science — Science</p>
+          <p class="edu-degree">Bachelor of Science — Science</p>
           <p class="edu-school">Osmania University</p>
         </div>
       </div>
@@ -191,72 +73,201 @@
   </div>
 
   <hr class="divider" />
-  <!--
-  <p class="section-label">Certifications - Coming Soon</p>
-  <div class="cert-cards-grid">
 
-    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
-      <div class="cert-card-top">
-        <span class="cert-icon">☁️</span>
-        <span class="cert-link-badge">Verify ↗</span>
-      </div>
-      <p class="cert-name">AWS Certified Solutions Architect</p>
-      <p class="cert-issuer">Amazon Web Services</p>
-      <p class="cert-date">Issued: Month 20XX</p>
-    </a>
+  <p class="section-label">Certifications</p>
 
-    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
-      <div class="cert-card-top">
-        <span class="cert-icon">☁️</span>
-        <span class="cert-link-badge">Verify ↗</span>
-      </div>
-      <p class="cert-name">AWS Certified Data Engineer</p>
-      <p class="cert-issuer">Amazon Web Services</p>
-      <p class="cert-date">Issued: Month 20XX</p>
-    </a>
+  <!-- Group 1 -->
+  <div class="certlet-group">
+    <p class="certlet-group-label">Data Analytics</p>
+    <div class="certlet-grid">
 
-    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
-      <div class="cert-card-top">
-        <span class="cert-icon">🐳</span>
-        <span class="cert-link-badge">Verify ↗</span>
-      </div>
-      <p class="cert-name">Certified Kubernetes Administrator</p>
-      <p class="cert-issuer">Cloud Native Computing Foundation</p>
-      <p class="cert-date">Issued: Month 20XX</p>
-    </a>
+      <a href="https://www.coursera.org/account/accomplishments/records/U5ANXJSECTZ9" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Introduction to Data-Analysis Using Python</p>
+        <p class="certlet-issuer">Google</p>
+      </a>
 
-    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
-      <div class="cert-card-top">
-        <span class="cert-icon">🔵</span>
-        <span class="cert-link-badge">Verify ↗</span>
-      </div>
-      <p class="cert-name">Microsoft Azure Fundamentals</p>
-      <p class="cert-issuer">Microsoft</p>
-      <p class="cert-date">Issued: Month 20XX</p>
-    </a>
+      <a href="https://www.coursera.org/account/accomplishments/records/JH3QE06KTQGS" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Analyze Data to Answer Questions</p>
+        <p class="certlet-issuer">Google</p>
+      </a>
 
-    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
-      <div class="cert-card-top">
-        <span class="cert-icon">📊</span>
-        <span class="cert-link-badge">Verify ↗</span>
-      </div>
-      <p class="cert-name">Your Certification Name</p>
-      <p class="cert-issuer">Issuing Organization</p>
-      <p class="cert-date">Issued: Month 20XX</p>
-    </a>
+      <a href="https://www.coursera.org/account/accomplishments/records/LRWIDQN4C64F" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Process Data from Dirty to Clean</p>
+        <p class="certlet-issuer">Google</p>
+      </a>
 
-    <a href="https://your-cert-uri-here" target="_blank" class="cert-card linked">
-      <div class="cert-card-top">
-        <span class="cert-icon">🏥</span>
-        <span class="cert-link-badge">Verify ↗</span>
-      </div>
-      <p class="cert-name">Your Certification Name</p>
-      <p class="cert-issuer">Issuing Organization</p>
-      <p class="cert-date">Issued: Month 20XX</p>
-    </a>
+      <a href="https://www.coursera.org/account/accomplishments/records/U3HZNFKW9NSZ" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Prepare Data for Exploration</p>
+        <p class="certlet-issuer">Google</p>
+      </a>
 
+    </div>
+  </div>
+
+  <!-- Group 2 -->
+  <div class="certlet-group">
+    <p class="certlet-group-label">Data Analytics</p>
+    <div class="certlet-grid">
+
+      <a href="https://www.coursera.org/account/accomplishments/verify/XVZ7VAJIMUCK" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Foundations Data Everywhere Certificate</p>
+        <p class="certlet-issuer">Google</p>
+      </a>
+
+      <a href="https://www.coursera.org/account/accomplishments/records/H0GLPC2AKMLA" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Make Data-Driven Decisions</p>
+        <p class="certlet-issuer">Google</p>
+      </a>
+
+      <a href="https://www.coursera.org/account/accomplishments/records/QJHX6FP6OIMR" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Share Data Through the Art of Visualization Certificate</p>
+        <p class="certlet-issuer">Google</p>
+      </a>
+
+      <a href="" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📊</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name"></p>
+        <p class="certlet-issuer"></p>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="certlet-group">
+    <p class="certlet-group-label">Observability &amp; SIEM</p>
+    <div class="certlet-grid">
+
+      <a href="https://learn.datadoghq.com/certificates/dx8whdwjyz" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🐳</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Datadog Observability Intro</p>
+        <p class="certlet-issuer">Datadog</p>
+      </a>
+
+      <a href="" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">⚙️</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Coming Soon</p>
+        <p class="certlet-issuer"></p>
+      </a>
+
+      <a href="" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">⚙️</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Coming Soon</p>
+        <p class="certlet-issuer"></p>
+      </a>
+
+      <a href="" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">⚙️</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Coming Soon</p>
+        <p class="certlet-issuer"></p>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="certlet-group">
+    <p class="certlet-group-label">Web3 Certifications</p>
+    <div class="certlet-grid">
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🐳</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">⚙️</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🔧</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">📦</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Group 4
+  <div class="certlet-group">
+    <p class="certlet-group-label">Agile, Scrum, Project Management, Product Owner </p>
+    <div class="certlet-grid">
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🤖</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🧬</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🔁</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">💡</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+    </div>
   </div>
   -->
+  <!-- Group 5
+  <div class="certlet-group">
+    <p class="certlet-group-label">Security &amp; Healthcare Technology</p>
+    <div class="certlet-grid">
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🔐</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🛡️</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🏥</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+      <a href="https://your-cert-uri-here" target="_blank" class="certlet">
+        <div class="certlet-top"><span class="certlet-icon">🌐</span><span class="certlet-badge">View ↗</span></div>
+        <p class="certlet-name">Certification Name</p>
+        <p class="certlet-issuer">Issuing Organization</p>
+      </a>
+
+    </div>
+  </div>
+  -->
+
+
 </div>
 </main>
 

@@ -903,18 +903,6 @@ footer .footer-copy { font-size: 11px; color: rgba(160,220,220,0.5); margin-top:
   align-items: center;
 }
 
-/* ── Industry row: 3 cards, Platform row: 5 cards ── */
-.domains-grid--industry  { grid-template-columns: repeat(3, 1fr); }
-.domains-grid--platform  { grid-template-columns: repeat(5, 1fr); }
-
-@media (max-width: 860px) {
-  .domains-grid--industry { grid-template-columns: repeat(2, 1fr); }
-  .domains-grid--platform { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .domains-grid--industry { grid-template-columns: 1fr; }
-  .domains-grid--platform { grid-template-columns: 1fr; }
-}
 
 /* ── Responsive ── */
 @media (max-width: 700px) {

@@ -250,6 +250,7 @@ nav {
   gap: 12px;
   margin-bottom: 2.5rem;
 }
+.domains-grid--platform { grid-template-columns: repeat(4, 1fr); }
 
 .domain-card {
   background: var(--bg-card);
@@ -936,4 +937,18 @@ footer .footer-copy { font-size: 11px; color: rgba(160,220,220,0.5); margin-top:
 @media (max-width: 420px) {
   .domains-grid  { grid-template-columns: 1fr; }
   .certlet-grid  { grid-template-columns: 1fr; }
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 2.5rem;
 }

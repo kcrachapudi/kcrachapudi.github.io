@@ -135,7 +135,7 @@ nav {
 }
 
 /* ── Hero ── */
-.hero { margin-bottom: 3rem; }
+.hero { margin-bottom: 1rem; }
 
 .eyebrow {
   font-size: 11px;
@@ -209,7 +209,7 @@ nav {
   height: 1px;
   background: linear-gradient(90deg, var(--border-md) 0%, transparent 80%);
   border: none;
-  margin: 1.25rem 0;
+  margin: 0.25rem 0;
 }
 
 /* ── Stats ── */

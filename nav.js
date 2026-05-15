@@ -6,10 +6,8 @@
     { href: "support-engineering.html",  label: "Support Engineering" },
     { href: "biomedtech.html",           label: "BioMedTech" },
     { href: "fintech.html",              label: "FinTech" },
-    { href: "data-analytics.html",       label: "Data Analytics" },
     { href: "data-engineering.html",     label: "Data Engineering" },
     { href: "observability.html",        label: "Observability & SIEM" },
-    { href: "devops.html",               label: "DevOps" },
     { href: "infrastructure.html",       label: "Infrastructure" },
   ];
 

@@ -297,7 +297,7 @@ nav {
 .dc-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .dc-tag { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: var(--bg-secondary); color: var(--text-secondary); }
 
-/* ── Featured / Highlight Cards ── */
+/* ── Featured / Highlight Cards (index page) ── */
 .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 2.5rem; }
 
 .hl-card {
@@ -492,7 +492,7 @@ nav {
 }
 .proj-card-footer .tag-row { flex-wrap: wrap; }
 
-/* ── Demo Detail Cards (Live Demos) ── */
+/* ── Demo Detail Cards ── */
 .demo-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -677,14 +677,8 @@ nav {
   color: var(--text-primary);
   line-height: 1.35;
 }
-.certlet-issuer {
-  font-size: 11px;
-  color: var(--text-secondary);
-}
-.certlet-date {
-  font-size: 10.5px;
-  color: var(--text-faint);
-}
+.certlet-issuer { font-size: 11px; color: var(--text-secondary); }
+.certlet-date   { font-size: 10.5px; color: var(--text-faint); }
 
 /* ── Q&A Section ── */
 .qa-list {
@@ -745,22 +739,133 @@ nav {
 }
 .back-link:hover { color: var(--accent); }
 
-/* ── Responsive ── */
-@media (max-width: 680px) {
-  .domains-grid    { grid-template-columns: repeat(2, 1fr); }
-  .highlights-grid { grid-template-columns: 1fr; }
-  .hero-name       { font-size: 30px; }
-  .nav-links a     { font-size: 11px; padding: 4px 6px; }
+/* ── Hero subtitle line ── */
+.hero-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 1px;
+  letter-spacing: 0.01em;
 }
-@media (max-width: 600px) {
-  .proj-cards-grid  { grid-template-columns: 1fr; }
-  .demo-cards-grid  { grid-template-columns: 1fr; }
-  .certlet-grid     { grid-template-columns: repeat(2, 1fr); }
-  .edu-cards-grid   { grid-template-columns: 1fr; }
+
+/* ── Featured Project Card (domain pages) ── */
+.featured-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 2.5rem;
 }
-@media (max-width: 420px) {
-  .domains-grid  { grid-template-columns: 1fr; }
-  .certlet-grid  { grid-template-columns: 1fr; }
+
+.featured-detail-card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border-accent);
+  border-top: 3px solid var(--accent-mid);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.featured-detail-card:hover {
+  box-shadow: 0 8px 28px rgba(10, 80, 80, 0.14);
+  transform: translateY(-2px);
+}
+
+.featured-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+}
+
+.featured-card-main {
+  padding: 1.5rem 1.75rem;
+  border-right: 0.5px solid var(--border);
+}
+
+.featured-card-side {
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.featured-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--badge-live-bg);
+  color: var(--badge-live-text);
+  margin-bottom: 10px;
+}
+.featured-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--badge-live-text);
+}
+
+.featured-card-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.featured-card-summary {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.featured-card-main ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 1.25rem;
+}
+.featured-card-main ul li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+.featured-card-main ul li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--accent-mid);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.featured-side-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.featured-side-value {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* ── Footer ── */
@@ -785,11 +890,50 @@ footer .contact-link {
 footer .contact-link:hover { background: rgba(10,200,200,0.25); color: #c8f5f5; }
 footer .footer-copy { font-size: 11px; color: rgba(160,220,220,0.5); margin-top: 0.25rem; }
 
-/* ── Hero subtitle line ── */
-.hero-sub {
-  font-size: 12px;
+/* ── Domain row label ── */
+.domains-row-label {
+  font-size: 11px;
   font-weight: 500;
-  color: var(--accent);
-  margin-bottom: 1px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Industry row: 3 cards, Platform row: 5 cards ── */
+.domains-grid--industry  { grid-template-columns: repeat(3, 1fr); }
+.domains-grid--platform  { grid-template-columns: repeat(5, 1fr); }
+
+@media (max-width: 860px) {
+  .domains-grid--industry { grid-template-columns: repeat(2, 1fr); }
+  .domains-grid--platform { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .domains-grid--industry { grid-template-columns: 1fr; }
+  .domains-grid--platform { grid-template-columns: 1fr; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .featured-card-inner { grid-template-columns: 1fr; }
+  .featured-card-side  { border-right: none; border-top: 0.5px solid var(--border); }
+  .featured-card-title { font-size: 18px; }
+}
+@media (max-width: 680px) {
+  .domains-grid    { grid-template-columns: repeat(2, 1fr); }
+  .highlights-grid { grid-template-columns: 1fr; }
+  .hero-name       { font-size: 30px; }
+  .nav-links a     { font-size: 11px; padding: 4px 6px; }
+}
+@media (max-width: 600px) {
+  .proj-cards-grid  { grid-template-columns: 1fr; }
+  .demo-cards-grid  { grid-template-columns: 1fr; }
+  .certlet-grid     { grid-template-columns: repeat(2, 1fr); }
+  .edu-cards-grid   { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .domains-grid  { grid-template-columns: 1fr; }
+  .certlet-grid  { grid-template-columns: 1fr; }
 }
